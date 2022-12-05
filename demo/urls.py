@@ -21,10 +21,10 @@ urlpatterns = [
     path('', home, name='home'),
 
     # Auth
-    path('logg-inn/', views.LoginView.as_view(template_name='core/login.html'), name='login'),
-    path('lag-bruker/', signup, name='signup'),
-    path('logg-ut/', views.LogoutView.as_view(), name='logout'),
-    path('min-bruker/', myaccount, name='myaccount'),
+    path('login/', views.LoginView.as_view(template_name='core/login.html'), name='login'),
+    path('signup/', signup, name='signup'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
+    path('myaccount/', myaccount, name='myaccount'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

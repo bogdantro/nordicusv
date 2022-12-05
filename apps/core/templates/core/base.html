@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#215074"/>
-    <title>Bogdan Trohanel</title>
+    <meta name="theme-color" value="#354D57">
+    <title>Nordic USV</title>
     <base href="/">
     <!-- links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,9 +37,16 @@
 
 </head>
 <body ontouchstart="" >
-    <div class="width">
+    <div id="mobileHidden">
+        <h1>This site is only accessible via your desktop</h1>
+        <hr>
+        <h1>Mobile version is not suported</h1>
+        <hr>
+        <h1>For more information, visit <a href="https://www.nordicusv.com">nordicusv.com</a></h1>
+    </div>
+    {% include 'core/nav.html' %}
+
     {% block content %}
     {% endblock %}
-    </div>
 </body>
 </html>

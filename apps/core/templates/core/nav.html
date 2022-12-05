@@ -15,35 +15,19 @@
 <script rel="stylesheet" src="{% static '/js/nav.js' %}"></script>
 
 
-<div id="mobileNav">
-    <div onclick="window.location.href='/'" id="logo" class="logo">
-        <img src="{% static 'images/logo/logo.png' %}" alt="">
-    </div>
-    <div class="hamburger" id="hamburger" onclick="menu()">
-        <p>CLOSE</p>
-        <span class="top-span"></span>
-        <span class="center-span"></span>
-        <span class="bottom-span"></span>
-    </div>
-    <div class="sidebar" id="sidebar">
-        <ul class="sidebar-ul">
-            <li>
-                <a href="/about-me">About me</a>
-                <a onclick="myWorkScroll()">Projects</a>
-                <a href="/get-in-touch">Contact</a>
-                <!-- <a href="/get-in-touch">Resume</a> -->
-            </li>
-        </ul>
-    </div>
-</div>
-
 <div id="desNav">
-    <div onclick="window.location.href='/'" id="logo" class="logo" title="Back to homepage">
-        <img src="{% static 'images/logo/logo.png' %}" alt="">
-    </div>
-    <div class="menu">
-        <a href="/about-me">About me</a>
-        <a href="#myWork">Projects</a>
-        <a href="/get-in-touch">Get in touch<i class="fa-solid fa-caret-right"></i></a>
+    <div class="width">
+        <div onclick="window.location.href='/'" id="logo" class="logo" title="Back to homepage">
+            <img src="{% static 'images/logo/logo.png' %}" alt="">
+        </div>
+        <div class="menu">
+            {% if request.user.is_authenticated %}
+            <a href="">Start a survey</a>
+            <a href="">My account</a>
+            <a href="{% url 'logout' %}">Log out</a>
+            {% else %}
+            <a href="">Info about us</a>
+            {% endif %}
+        </div>
     </div>
 </div>

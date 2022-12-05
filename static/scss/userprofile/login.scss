@@ -1,4 +1,72 @@
 .login{
-    margin: 100px auto;
-    width: max-content;
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    .text{
+        text-align: center;
+        .heading{
+            color: #183B56;
+            font-weight: bold;
+            font-size: 33px;
+        }
+    }
+    #loginForm{
+        width: auto;
+        height: auto;
+        .inputs{
+            input{
+                width: 450px;
+                height: 65px;
+                margin-block: 25px;
+                border: none;
+                border-bottom: 2px solid #354d57ce;
+                padding: 12px;
+                color: #183B56;
+                font-size: 17px;
+                cursor: pointer;
+                background: transparent;
+                &:hover{
+                    background: #354d5713;
+                }
+                &:focus, &:active{
+                    border: 3px solid #354d57ce;
+                    cursor: text;
+                    background: transparent;
+                }
+                &::placeholder{
+                    color: #183B56;
+                    opacity: 0.6;
+                }
+            }
+        }
+        .form-actions{
+            button{
+                width: 100%;
+                height: 60px;
+                background: #354D57;
+                color: white;
+                border-radius: 4px;
+                font-size: 16px;
+                padding: 3px;
+                cursor: pointer;
+                transition: .4s;
+                border: none;
+                outline: none;
+                &:hover{
+                    transform: scale(1.01);
+                    background: rgb(61, 95, 121);
+                }
+            }
+        }
+        .signup{
+            color: #183B56;
+            font-size: 16px;
+            text-decoration: underline;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
 }
