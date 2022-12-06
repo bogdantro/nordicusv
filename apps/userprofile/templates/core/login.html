@@ -7,6 +7,16 @@
 
 
 
+{% if request.user.is_authenticated %}
+<script type="text/javascript">
+    window.onload = function(){ 
+    setTimeout(() => {
+        window.location.replace("/");
+
+    }, 450);
+    }
+</script>
+{% else %}
 <div class="login page-for-form">
     <!-- USER LOGIN -->
     <form id="loginForm" method="post">
@@ -35,7 +45,7 @@
         <a href="/signup/" class="signup">Or make an account</a>
     </form>
 </div>
-<div class="black-overlay" id="blackOverlay"></div>
+{% endif %}
 
 {% endblock %}
             
