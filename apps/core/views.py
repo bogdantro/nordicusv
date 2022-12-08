@@ -13,30 +13,35 @@ from django.db.models import *
 from django.contrib.auth.decorators import *
 from django.contrib.auth.decorators import login_required
 
+from .forms import ImageForm
 
 
 # Home
 @login_required
 def home(request):
-    return render(request, 'core/home.html')
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # Get the current instance object to display in the template
+            img_obj = form.instance
+            return render(request, 'core/home.html', {'form': form, 'img_obj': img_obj})
+    else:
+        form = ImageForm()
+    return render(request, 'core/home.html', {'form': form})
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def image_upload_view(request):
+#     """Process images uploaded by users"""
+#     if request.method == 'POST':
+#         form = ImageForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             # Get the current instance object to display in the template
+#             img_obj = form.instance
+#             return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
+#     else:
+#         form = ImageForm()
+#     return render(request, 'index.html', {'form': form})
 
 
 

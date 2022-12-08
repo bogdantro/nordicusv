@@ -10,8 +10,36 @@
 <br>
 <br>
 <br>
+<center>
+    designen av denne siden skal selvsagt bli redesignet. Dette er bare en type demo, sånn at du får en idee.
+    <br>
+    <br>
+    etter du har sendt inn bildet, kan du sjekke den i admin siden, under "Imags". Dette vil etterhvert bli endret til
+    <br>
+    "Orders". der kan du se all info du trenger
+</center>
+<hr>
 <br>
-<br>
-<center>her skal kartet være</center>
+<div class="form">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+         {{ form.as_p }}
+        <button type="submit">Upload</button>
+      </form>
+      
+      {% if img_obj %}
+        <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+        <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+      {% endif %}
+    <div class="right">
+        her skal resten av informasjonen stå
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
 
 {% endblock %}

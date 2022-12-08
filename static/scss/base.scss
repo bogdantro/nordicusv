@@ -1,0 +1,26 @@
+.form{
+    width: 80%;
+    height: 100%;
+    margin-top: -20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+        padding: 10px;
+        width: max-content;
+        height: 120px;
+        border: 2px solid black;
+    }
+    .right{
+        transform: translateX(-200px);
+        .line{
+            width: 200px;
+            height: 3px;
+            background: rgba(20,20,20,0.1);
+            margin-block: 40px;
+        }
+    }
+}
