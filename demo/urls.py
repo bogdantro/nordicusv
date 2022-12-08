@@ -6,11 +6,8 @@ from django.contrib import admin
 from apps.userprofile.views import *
 from django.contrib.auth import views
 
-from django.contrib import admin
-from django.urls import path, include
 from apps.core.views import *
 from django.conf import settings
-from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth import views
