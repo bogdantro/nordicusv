@@ -22,11 +22,14 @@
         </div>
         <div class="menu">
             {% if request.user.is_authenticated %}
-            <a href="">Start a survey</a>
-            <a href="">My account</a>
+            <a href="/">Start a survey</a>
+            <a href="/help/">Help</a>
+            <a href="/myaccount/">My account</a>
             <a href="{% url 'logout' %}">Log out</a>
             {% else %}
-            <a href="">Info about us</a>
+            <a href="https://www.nordicusv.com/">Info about us</a>
+            <a href="/login/">Log in</a>
+            <a href="/signup/">Sign up</a>
             {% endif %}
         </div>
     </div>

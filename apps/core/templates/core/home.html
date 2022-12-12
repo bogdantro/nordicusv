@@ -10,8 +10,6 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
 
-<br>
-
 <style>
   .info-box {
   position: absolute;
@@ -25,19 +23,27 @@
 }
 </style>
 
-<center>
-  
+<!-- Survey -->
+<div class="survey">
+  <!-- Left -->
+  <div class="left">
+    <div id='map'></div>
+  </div>
+  <!-- Right -->
+  <div class="right">
+    Your sensorc etc will be here
+  </div>
+</div>
 
 
-  <div class="info-box">
+  <!-- <div class="info-box">
     <p>
       Draw your route using the draw tools on the right. To get the most
       accurate route match, draw points at regular intervals.
     </p>
     <div id="directions"></div>
-  </div>
+  </div> -->
 
-  <div id='map' width="100%" style='height:600px'></div>
   <script>
 
 
@@ -136,7 +142,7 @@ async function getMatch(coordinates, radius, profile) {
   const radiuses = radius.join(';');
   // Create the query
   const query = await fetch(
-    `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&steps=true&access_token=${mapboxgl.accessToken}`,
+    `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&steps=true&access_token='pk.eyJ1IjoiYm9nZGFudHJvIiwiYSI6ImNsYmplbDk2MDB2N28zcG8wZ2szZmE3b2EifQ.pShLgmxwjWYAl4pz4FTCSw'`,
     { method: 'GET' }
   );
   const response = await query.json();
@@ -267,7 +273,6 @@ map.on('draw.delete', removeRoute);
 
 
     </script>
-</center>
 
 
 {% endblock %}

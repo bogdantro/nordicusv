@@ -1,28 +1,23 @@
-.form {
-  width: 80%;
+.survey {
+  width: 100%;
   height: 100%;
-  margin-top: -20px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.form .left {
-  padding: 10px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: 120px;
-  border: 2px solid black;
+.survey .left {
+  width: 70%;
 }
-.form .right {
-  transform: translateX(-200px);
+.survey .left #map {
+  width: 100%;
+  height: calc(100vh - 60px);
 }
-.form .right .line {
-  width: 200px;
-  height: 3px;
-  background: rgba(20, 20, 20, 0.1);
-  margin-block: 40px;
+.survey .right {
+  width: 30%;
+  height: calc(100vh - 60px);
+  background: #496671;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  padding-top: 100px;
+  padding-inline: 30px;
 }/*# sourceMappingURL=base.css.map */

@@ -8,15 +8,15 @@ from django.core.mail import send_mail, BadHeaderError
 
 @login_required
 def myaccount(request):
-    orderFinished = Order.objects.filter(user=request.user, is_finished=True).first()
-    orderConfirmed = Order.objects.filter(user=request.user, is_confirmed=True).first()
+    # orderFinished = Order.objects.filter(user=request.user, is_finished=True).first()
+    # orderConfirmed = Order.objects.filter(user=request.user, is_confirmed=True).first()
 
-    context = {
-        'orderFinished':orderFinished,
-        'orderConfirmed':orderConfirmed,
-     }
+    # context = {
+    #     'orderFinished':orderFinished,
+    #     'orderConfirmed':orderConfirmed,
+    #  }
 
-    return render(request, 'core/myaccount.html', context)
+    return render(request, 'core/myaccount.html')
 
 # @login_required
 
