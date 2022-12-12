@@ -15,9 +15,19 @@
   width: 30%;
   height: calc(100vh - 60px);
   background: #496671;
+  padding-inline: 20px;
+}
+.survey .right h1 {
   text-align: center;
   color: white;
-  font-size: 36px;
-  padding-top: 100px;
-  padding-inline: 30px;
+  font-size: 30px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.survey .right .step {
+  width: 100%;
+  height: 1px;
+  border: 6px solid rgba(170, 170, 170, 0.6);
+  margin-block: 40px;
+  border-radius: 20px;
 }/*# sourceMappingURL=base.css.map */
