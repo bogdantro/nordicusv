@@ -9,58 +9,57 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
 
-<style>
-  .info-box {
-  position: absolute;
-  margin: 20px;
-  width: 25%;
-  top: 0;
-  bottom: 20px;
-  padding: 20px;
-  background-color: #fff;
-  overflow-y: scroll;
-}
-</style>
-
 <!-- Survey -->
 <div class="survey">
   <!-- Left -->
   <div class="left">
     <div id='map'></div>
+    <div class="cords" id="cords"></div>
   </div>
   <!-- Right -->
   <div class="right">
-    <h1>The "form" will be here</h1>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-    <div class="step"></div>
-  </div>
+    <div class="info-text">
+      <h1 class="heading">Here are your tools to order the survey</h1>
+      <p class="paragraph">We recommend you watch <a href="">this video</a> that showcases how to use our services</p>
+    </div>
+    <!-- Step 1 -->
+    <div class="step one">
+      <h1>Make route</h1>
+    </div>
+    <!-- Step 2 -->
+    <div class="step two">
+      <h1>Add sensors</h1>
+    </div>
+    <!-- Step 3 -->
+    <div class="step three">
+      <h1>Set time/date</h1>
+    </div>
+    <!-- Step 4 -->
+    <div class="step four">
+      <h1>Information</h1>
+    </div>
+    <!-- Step 5 -->
+    <div class="step five">
+      <h1>Summary</h1>
+    </div>
 </div>
 
 
-  <!-- <div class="info-box">
-    <p>
-      Draw your route using the draw tools on the right. To get the most
-      accurate route match, draw points at regular intervals.
-    </p>
-    <div id="directions"></div>
-  </div> -->
-
 <script>
-    mapboxgl.accessToken =  '{{mapbox_access_token}}';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/outdoors-v11',
-     center: [5.359434, 60.389809],
-     zoom: 9,
+
+
+  // Add your Mapbox access token
+  mapboxgl.accessToken = '{{mapbox_access_token}}';
+    const map = new mapboxgl.Map({
+      container: 'map', // Specify the container ID
+      style: 'mapbox://styles/mapbox/outdoors-v12', // Specify which map style to use
+      center: [5.359434, 60.389809], // Specify the starting position
+      zoom: 9, // Specify the starting zoom
     });
 
+
     const draw = new MapboxDraw({
+
 
       // Instead of showing all the draw tools, show only the line string and delete tools.
       displayControlsDefault: false,
@@ -71,6 +70,7 @@
       // Set the draw mode to draw LineStrings by default.
       defaultMode: 'draw_line_string',
       styles: [
+
 
       // Set the line style for the user-input coordinates.
       {
@@ -89,6 +89,7 @@
         }
       },
 
+
       // Style the vertex point halos.
       {
         id: 'gl-draw-polygon-and-line-vertex-halo-active',
@@ -104,6 +105,7 @@
           'circle-color': '#FFF'
         }
       },
+
 
       // Style the vertex points.
       {
@@ -123,8 +125,10 @@
     ]
   });
 
+
   // Add the draw tool to the map.
   map.addControl(draw);
+
 
   // Use the coordinates you drew to make the Map Matching API request
   function updateRoute() {
@@ -141,32 +145,10 @@
     getMatch(newCoords, radius, profile);
   }
 
-  // Make a Map Matching request
-  async function getMatch(coordinates, radius, profile) {
-    // Separate the radiuses with semicolons
-    const radiuses = radius.join(';');
-    // Create the query
-    const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&steps=true&access_token='pk.eyJ1IjoiYm9nZGFudHJvIiwiYSI6ImNsYmplbDk2MDB2N28zcG8wZ2szZmE3b2EifQ.pShLgmxwjWYAl4pz4FTCSw'`,
-      { method: 'GET' }
-    );
-    const response = await query.json();
-    // Handle errors
-    if (response.code !== 'Ok') {
-      alert(
-        `${response.code} - ${response.message}.\n\nFor more information: https://docs.mapbox.com/api/navigation/map-matching/#map-matching-api-errors`
-      );
-      return;
-    }
-
-    // Get the coordinates from the response
-    const coords = response.matchings[0].geometry;
-    console.log(coords);
-    // Code from the next step will go here
-  }
 
   map.on('draw.create', updateRoute);
   map.on('draw.update', updateRoute);
+
 
 
   // Draw the Map Matching route as a new layer on the map
@@ -201,6 +183,7 @@
     }
   }
 
+
   // Make a Map Matching request
   async function getMatch(coordinates, radius, profile) {
     // Separate the radiuses with semicolons
@@ -211,57 +194,17 @@
       { method: 'GET' }
     );
     const response = await query.json();
-    // Handle errors
-    if (response.code !== 'Ok') {
-      alert(
-        `${response.code} - ${response.message}.\n\nFor more information: https://docs.mapbox.com/api/navigation/map-matching/#map-matching-api-errors`
-      );
-      return;
-    }
     // Get the coordinates from the response
-    const coords = response.matchings[0].geometry;
+    const coords = coordinates;
+    console.log(coords);
     // Draw the route on the map
     addRoute(coords);
+
+
+    const directions = document.getElementById('cords');
+    directions.innerHTML = '<li><span>'+coords+'</span></li><br><br>';
   }
 
-  function getInstructions(data) {
-    // Target the sidebar to add the instructions
-    const directions = document.getElementById('directions');
-    let tripDirections = '';
-    // Output the instructions for each step of each leg in the response object
-    for (const leg of data.legs) {
-      const steps = leg.steps;
-      for (const step of steps) {
-        tripDirections += `<li>${step.maneuver.instruction}</li>`;
-      }
-    }
-    directions.innerHTML = `<p><strong>Trip duration: ${Math.floor(
-      data.duration / 60
-    )} min.</strong></p><ol>${tripDirections}</ol>`;
-  }
-
-  // Make a Map Matching request
-  async function getMatch(coordinates, radius, profile) {
-    // Separate the radiuses with semicolons
-    const radiuses = radius.join(';');
-    // Create the query
-    const query = await fetch(
-      `https://api.mapbox.com/matching/v5/mapbox/${profile}/${coordinates}?geometries=geojson&radiuses=${radiuses}&steps=true&access_token=${mapboxgl.accessToken}`,
-      { method: 'GET' }
-    );
-    const response = await query.json();
-    // Handle errors
-    if (response.code !== 'Ok') {
-      alert(
-        `${response.code} - ${response.message}.\n\nFor more information: https://docs.mapbox.com/api/navigation/map-matching/#map-matching-api-errors`
-      );
-      return;
-    }
-    const coords = response.matchings[0].geometry;
-    // Draw the route on the map
-    addRoute(coords);
-    getInstructions(response.matchings[0]);
-  }
 
   // If the user clicks the delete draw button, remove the layer if it exists
   function removeRoute() {
@@ -270,9 +213,9 @@
     map.removeSource('route');
   }
 
+
   map.on('draw.delete', removeRoute);
 </script>
-
 
 {% endblock %}
  
