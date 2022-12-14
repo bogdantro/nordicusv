@@ -10,7 +10,7 @@
 }
 .survey .left #map {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 65px);
 }
 .survey .left .cords {
   position: absolute;
@@ -26,27 +26,50 @@
   width: 30%;
   height: calc(100vh - 60px);
   background: #496671;
-  padding-inline: 20px;
+  padding-inline: 30px;
+  padding-top: 19px;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+}
+.survey .right .top-row {
+  width: 100%;
+  cursor: default;
+}
+.survey .right .top-row .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.survey .right .top-row .user h3 {
+  color: white;
+  opacity: 0.75;
+  font-size: 17px;
+  transform: translateY(6px);
+}
+.survey .right .top-row .user .user-img {
+  width: 35px;
+  height: auto;
+}
+.survey .right .top-row .before-start h3 {
+  color: white;
+  opacity: 0.75;
+  font-size: 17px;
+}
+.survey .right .top-row .before-start h3 a {
+  color: white;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.survey .right .top-row .before-start h3 a:hover {
+  opacity: 0.8;
 }
 .survey .right .info-text {
-  margin-top: 40px;
+  margin-top: 15px;
   text-align: center;
 }
 .survey .right .info-text .heading {
   color: white;
   font-size: 28px;
-}
-.survey .right .info-text .paragraph {
-  color: white;
-  opacity: 0.8;
-}
-.survey .right .info-text .paragraph a {
-  color: white;
-  opacity: 0.7;
-  text-decoration: underline;
-}
-.survey .right .info-text .paragraph a:hover {
-  opacity: 0.8;
 }
 .survey .right .step {
   padding: 7px;
@@ -68,4 +91,58 @@
   color: white;
   font-size: 20px;
   margin: auto;
+}
+.survey .right #makeRoute {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: #496671;
+  padding: 40px 30px;
+  text-align: center;
+  opacity: 0;
+  top: 100%;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.survey .right #makeRoute h1 {
+  font-size: 28px;
+  color: white;
+}
+.survey .right #makeRoute .paragraph {
+  color: white;
+  opacity: 0.9;
+}
+.survey .right #makeRoute textarea {
+  outline: none;
+  border: none;
+  padding: 6px;
+  width: 100%;
+  max-height: 3980px;
+  border-radius: 4px;
+}
+.survey .right #makeRoute button {
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+  background: #354D57;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  outline: none;
+}
+.survey .right #makeRoute button:hover {
+  transform: scale(1.01);
+  background: rgb(61, 95, 121);
+}
+.survey .right #makeRoute.active {
+  pointer-events: visible;
+  opacity: 1;
+  top: 65px;
 }/*# sourceMappingURL=base.css.map */

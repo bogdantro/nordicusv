@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
 .paragraph {
   margin: 0 !important;
   color: #183B56;

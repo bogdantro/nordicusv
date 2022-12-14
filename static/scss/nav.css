@@ -1,19 +1,13 @@
 #desNav {
   width: 100%;
-  height: 60px;
+  padding: 10px 31px;
+  height: 65px;
   background: #354D57;
   position: relative;
   top: 0;
-}
-#desNav .width {
-  width: 100%;
-  height: 100%;
-  max-width: 1150px;
-  padding-inline: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: auto;
+  justify-content: space-between;
 }
 #desNav .logo {
   cursor: pointer;
@@ -26,10 +20,14 @@
 #desNav .logo img:hover {
   transform: scale(1.05);
 }
+#desNav .menu {
+  cursor: default;
+}
 #desNav .menu a {
   color: #EDEDED;
   font-size: 17px;
-  padding-inline: 10px;
+  padding-inline: 6px;
+  margin-inline: 6px;
   text-decoration: none;
   opacity: 0.8;
   cursor: pointer;

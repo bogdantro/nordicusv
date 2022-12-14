@@ -4,6 +4,7 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static '/scss/global/global.css' %}" type="text/css">
+<script src="{% static '/js/home.js' %}"></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
@@ -18,26 +19,59 @@
   </div>
   <!-- Right -->
   <div class="right">
+    <!-- Top row -->
+    <div class="top-row">
+      <!-- User -->
+      <div class="user">
+        <h3>Welcome {{request.user.first_name}}</h3>
+        {% if request.user.image %}
+        <img src="{{request.user.image}}" alt="" class="user-img">
+        {% else %}
+        <img src="{% static 'images/user/default-user.png' %}" alt="" class="user-img">
+        {% endif %}
+      </div>
+
+      <hr style="border-color: rgba(250,250,250,0.45);">
+
+      <!-- Before start -->
+      <div class="before-start">
+        <h3>Before you start we recommend you watch <a href="">this video</a> that showcases how to use our services</h3>
+      </div>
+    </div>
+    <hr style="border-color: rgba(250,250,250,0.45);">
     <div class="info-text">
       <h1 class="heading">Here are your tools to order the survey</h1>
-      <p class="paragraph">We recommend you watch <a href="">this video</a> that showcases how to use our services</p>
     </div>
+
     <!-- Step 1 -->
-    <div class="step one">
-      <h1>Make route</h1>
+    <div class="step one" id="stepOne" onclick="stepOneOpen()">
+      <h1>Create route</h1>
     </div>
+    <div class="make-route active" id="makeRoute">
+      <h1>Create route</h1>
+      <p class="paragraph">Draw a route on the map to your left, or you can use the input bellow to write your own coordinates. Please check that the coordinates are correct before proceeding<br><br>If you need any help, navigate to "Help" page</brZ></b></brZ></p>
+      <input type="text" name="" id="" style="display: none;">
+      <br>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
+      <br>
+      <button onclick="stepOneClose()">Next step</button>
+    </div>
+
     <!-- Step 2 -->
     <div class="step two">
       <h1>Add sensors</h1>
     </div>
+
     <!-- Step 3 -->
     <div class="step three">
       <h1>Set time/date</h1>
     </div>
+
     <!-- Step 4 -->
     <div class="step four">
       <h1>Information</h1>
     </div>
+
     <!-- Step 5 -->
     <div class="step five">
       <h1>Summary</h1>

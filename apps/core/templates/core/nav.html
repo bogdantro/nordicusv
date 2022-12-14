@@ -14,21 +14,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <div id="desNav">
-    <div class="width">
-        <div onclick="window.location.href='/'" id="logo" class="logo" title="Back to homepage">
-            <img src="{% static 'images/logo/logo.png' %}" alt="">
-        </div>
-        <div class="menu">
-            {% if request.user.is_authenticated %}
-            <a href="/">Start a survey</a>
-            <a href="/help/">Help</a>
-            <a href="/myaccount/">My account</a>
-            <a href="{% url 'logout' %}">Log out</a>
-            {% else %}
-            <a href="https://www.nordicusv.com/">Info about us</a>
-            <a href="/login/">Log in</a>
-            <a href="/signup/">Sign up</a>
-            {% endif %}
-        </div>
+    <div onclick="window.location.href='/'" id="logo" class="logo" title="Back to homepage">
+        <img src="{% static 'images/logo/logo.png' %}" alt="">
+    </div>
+    <div class="menu">
+        {% if request.user.is_authenticated %}
+        <a href="/">Start a survey</a>
+        <a href="/help/">Help</a>
+        <a href="/myaccount/">My account</a>
+        <a href="{% url 'logout' %}">Log out</a>
+        {% else %}
+        <a href="https://www.nordicusv.com/">Info about us</a>
+        <a href="/login/">Log in</a>
+        <a href="/signup/">Sign up</a>
+        {% endif %}
     </div>
 </div>
