@@ -67,10 +67,38 @@
     <div class="step two" onclick="stepTwoOpen()">
       <h1>Add sensors</h1>
     </div>
-    <div class="add-sensors" id="addSensors">
+    <div class="add-sensors active" id="addSensors">
       <div onclick="stepTwoClose()" class="close"><i class="fa-solid fa-x"></i></div>
       <h1>Add sensors</h1>
-      <p class="paragraph">Choose what sensors you want, and how long to use them for</p>
+      <p class="paragraph">Choose what sensors you want, and how long to use them for<br><br>One waypoint is one blue dot on the map. If you entered custom coordinates, use the coordinates instead of waypoint number</p>
+      <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>
+      <br>
+      <!-- Available sensors -->
+      <div class="availble-sensors">
+        <p class="headingp">Sensors available</p>
+        
+        <hr style="border-color: rgba(250,250,250,0.45);">
+        <div class="sensor">
+          <p class="name">Sensor 1</p>
+          <p class="price">20 000kr</p>
+        </div>
+        <hr style="border-color: rgba(250,250,250,0.45);">
+            
+        <hr style="border-color: rgba(250,250,250,0.45); margin-top: 30px;">
+        <div class="sensor">
+          <p class="name">Sensor 2</p>
+          <p class="price">8000kr</p>
+        </div>
+        <hr style="border-color: rgba(250,250,250,0.45);">
+
+      </div>
+      <br>
+      <!-- Choose sensors -->
+      <div class="choose-sensors">
+        <label for="sensor1">Configure sensor 1</label>
+        <br>
+        <input type="text" placeholder="From waypoint 1 to waypoint 6" class="sensor-input">
+      </div>
       <br>
       <button onclick="validateStepTwo()">Save</button>
     </div>

@@ -140,6 +140,7 @@ html, body {
   height: 120px;
   max-height: 300px;
   border-radius: 4px;
+  color: #183B56;
 }
 .survey .right #makeRoute textarea::-moz-placeholder {
   opacity: 0.7;
@@ -226,6 +227,55 @@ html, body {
 .survey .right #addSensors button:hover {
   transform: scale(1.01);
   background: rgb(61, 95, 121);
+}
+.survey .right #addSensors .availble-sensors .headingp {
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.survey .right #addSensors .availble-sensors .sensor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-block: 2px;
+}
+.survey .right #addSensors .availble-sensors .sensor .name, .survey .right #addSensors .availble-sensors .sensor .price {
+  color: white;
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+.survey .right #addSensors .choose-sensors {
+  text-align: left;
+}
+.survey .right #addSensors .choose-sensors label {
+  color: white;
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 11px;
+}
+.survey .right #addSensors .choose-sensors input {
+  width: 80%;
+  height: 42px;
+  border-radius: 4px;
+  padding: 8px;
+  color: #183B56;
+  background: white;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.survey .right #addSensors .choose-sensors input::-moz-placeholder {
+  opacity: 0.7;
+}
+.survey .right #addSensors .choose-sensors input:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.survey .right #addSensors .choose-sensors input::placeholder {
+  opacity: 0.7;
 }
 .survey .right #addSensors.active {
   pointer-events: visible;

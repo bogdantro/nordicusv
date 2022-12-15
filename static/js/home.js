@@ -39,3 +39,15 @@ function stepTwoClose(){
 
     addSensors.classList.remove('active');
 }
+function validateStepTwo(){
+    const addSensors = document.getElementById('addSensors');
+    const addSensorError = document.getElementById('addSensorError');
+    const sensorInput = document.querySelector('.sensor-input');
+    
+    if(sensorInput.value){
+        addSensors.classList.remove('active');
+        addSensorError.style.display = 'none';
+    }else{
+        addSensorError.style.display = 'block';        
+    }
+}
