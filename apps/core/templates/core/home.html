@@ -46,19 +46,21 @@
     <div class="step one" id="stepOne" onclick="stepOneOpen()">
       <h1>Create route</h1>
     </div>
-    <div class="make-route" id="makeRoute">
+    <div class="make-route active" id="makeRoute">
       <div onclick="stepOneClose()" class="close"><i class="fa-solid fa-x"></i></div>
       <h1>Create route</h1>
       <p class="paragraph">Draw a route on the map to your left. Draw only one route per survey. Please check that the coordinates are correct before proceeding</p>
       <br>
-      <textarea name="" id="cords" cols="30" rows="10" placeholder="The cords of the route that you draw, will show here"></textarea>
+      <div class="alert-danger" id="makeRouteError" style="display: none;">You need to draw a route, or enter your own coordinates in order to save</div>
+      <br>
+      <textarea name="" id="routeCords" cols="30" rows="10" placeholder="The cords of the route that you draw, will show here"></textarea>
       <br>
       <br>
       <p class="paragraph">You can also use the input below to enter your own coordinates<br>Check the example below</p>
       <br>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
+      <textarea name="" id="customCords" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
       <br>
-      <button onclick="stepOneClose()">Next step</button>
+      <button onclick="validateStepOne()">Save</button>
     </div>
 
     <!-- Step 2 -->
@@ -239,8 +241,8 @@
     addRoute(coords);
 
 
-    const directions = document.getElementById('cords');
-    directions.value = coords;
+    const routeCords = document.getElementById('routeCords');
+    routeCords.value = coords;
   }
 
 
@@ -249,6 +251,9 @@
     if (!map.getSource('route')) return;
     map.removeLayer('route');
     map.removeSource('route');
+
+    const routeCords = document.getElementById('routeCords');
+    routeCords.value = "";
   }
 
 
