@@ -1,3 +1,4 @@
+// Make route
 function stepOneOpen(){
     const makeRoute = document.getElementById('makeRoute');
 
@@ -25,4 +26,16 @@ function validateStepOne(){
         customCords.style.pointerEvents = 'visible';
         makeRouteError.style.display = 'block';        
     }
+}
+
+// Add sensors
+function stepTwoOpen(){
+    const addSensors = document.getElementById('addSensors');
+
+    addSensors.classList.add('active');
+}
+function stepTwoClose(){
+    const addSensors = document.getElementById('addSensors');
+
+    addSensors.classList.remove('active');
 }
