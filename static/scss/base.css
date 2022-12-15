@@ -1,3 +1,7 @@
+html, body {
+  overflow-y: hidden !important;
+}
+
 .survey {
   width: 100%;
   height: 100%;
@@ -25,7 +29,7 @@
 .survey .right {
   width: 30%;
   height: calc(100vh - 60px);
-  background: #496671;
+  background: #425e68;
   padding-inline: 30px;
   padding-top: 19px;
   overflow-y: scroll;
@@ -106,10 +110,22 @@
   top: 100%;
   pointer-events: none;
   transition: 0.5s;
+  overflow-y: scroll;
+}
+.survey .right #makeRoute .close {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 6px;
+  margin: -6px;
 }
 .survey .right #makeRoute h1 {
-  font-size: 28px;
+  margin-top: 20px;
+  font-size: 30px;
   color: white;
+  margin-bottom: 11px;
 }
 .survey .right #makeRoute .paragraph {
   color: white;
@@ -120,8 +136,21 @@
   border: none;
   padding: 6px;
   width: 100%;
-  max-height: 3980px;
+  height: 120px;
+  max-height: 300px;
   border-radius: 4px;
+}
+.survey .right #makeRoute textarea::-moz-placeholder {
+  opacity: 0.7;
+}
+.survey .right #makeRoute textarea:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.survey .right #makeRoute textarea::placeholder {
+  opacity: 0.7;
+}
+.survey .right #makeRoute textarea#cords {
+  pointer-events: none;
 }
 .survey .right #makeRoute button {
   margin-top: 25px;

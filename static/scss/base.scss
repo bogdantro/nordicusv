@@ -1,3 +1,7 @@
+html, body {
+    overflow-y: hidden !important;
+}
+
 // Survey
 .survey{
     width: 100%;
@@ -27,7 +31,7 @@
     .right{
         width: 30%;
         height: calc(100vh - 60px);
-        background: #496671;
+        background: #425e68;
         padding-inline: 30px;
         padding-top: 19px;
         overflow-y: scroll;
@@ -111,9 +115,21 @@
             top: 100%;
             pointer-events: none;
             transition: .5s;
-            h1{
-                font-size: 28px;
+            overflow-y: scroll;
+            .close{
                 color: white;
+                font-size: 24px;
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                padding: 6px;
+                margin: -6px;
+            }
+            h1{
+                margin-top: 20px;
+                font-size: 30px;
+                color: white;
+                margin-bottom: 11px;
             }
             .paragraph{
                 color: white;
@@ -124,8 +140,15 @@
                 border: none;
                 padding: 6px;
                 width: 100%;
-                max-height: 3980px;
+                height: 120px;
+                max-height: 300px;
                 border-radius: 4px;
+                &::placeholder{
+                    opacity: 0.7;
+                }
+                &#cords{
+                    pointer-events: none;
+                }
             }
             button{
                 margin-top: 25px;
