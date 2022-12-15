@@ -150,9 +150,6 @@ html, body {
 .survey .right #makeRoute textarea::placeholder {
   opacity: 0.7;
 }
-.survey .right #makeRoute textarea#routeCords {
-  pointer-events: none;
-}
 .survey .right #makeRoute button {
   margin-top: 25px;
   width: 100%;
