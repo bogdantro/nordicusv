@@ -51,3 +51,14 @@ function validateStepTwo(){
         addSensorError.style.display = 'block';        
     }
 }
+
+// Set date/time
+function stepThreeOpen(){
+    const setTime = document.getElementById('setTime');
+    setTime.classList.add('active');
+}
+function stepThreeClose(){
+    const setTime = document.getElementById('setTime');
+
+    setTime.classList.remove('active');
+}

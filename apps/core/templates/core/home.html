@@ -109,8 +109,16 @@
     </div>
 
     <!-- Step 3 -->
-    <div class="step three">
+    <div class="step three" onclick="stepThreeOpen()">
       <h1>Set time/date</h1>
+    </div>
+    <div class="set-time" id="setTime">
+      <div onclick="stepThreeClose()" class="close"><i class="fa-solid fa-x"></i></div>
+      <h1>Set time/date</h1>
+      <p class="paragraph">Set the time and date when the survey will take place</p>
+      <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to choose a date and time in order to save</div>
+      <br>
+      <button onclick="validateStepThree()">Save</button>
     </div>
 
     <!-- Step 4 -->
