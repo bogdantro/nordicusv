@@ -30,7 +30,7 @@ html, body {
   width: 30%;
   height: calc(100vh - 60px);
   background: #425e68;
-  padding-inline: 30px;
+  padding-inline: 15px;
   padding-top: 19px;
   overflow-y: scroll;
   overflow-x: hidden !important;
@@ -336,7 +336,160 @@ html, body {
   transform: scale(1.01);
   background: rgb(61, 95, 121);
 }
+.survey .right #setTime #time {
+  width: 70%;
+  border-radius: 25px;
+  height: 50px;
+  color: #183B56;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 8px;
+}
 .survey .right #setTime.active {
+  pointer-events: visible;
+  opacity: 1;
+  top: 65px;
+}
+.survey .right #userInfo {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: #496671;
+  padding: 40px 30px;
+  padding-bottom: 90px;
+  text-align: center;
+  opacity: 0;
+  top: 100%;
+  pointer-events: none;
+  transition: 0.5s;
+  overflow-y: scroll;
+}
+.survey .right #userInfo .close {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 6px;
+  margin: -6px;
+}
+.survey .right #userInfo h1 {
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 11px;
+}
+.survey .right #userInfo button {
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+  background: #354D57;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  outline: none;
+}
+.survey .right #userInfo button:hover {
+  transform: scale(1.01);
+  background: rgb(61, 95, 121);
+}
+.survey .right #userInfo input, .survey .right #userInfo textarea {
+  color: #183B56;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.survey .right #userInfo input::-moz-placeholder, .survey .right #userInfo textarea::-moz-placeholder {
+  opacity: 0.7;
+}
+.survey .right #userInfo input:-ms-input-placeholder, .survey .right #userInfo textarea:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.survey .right #userInfo input::placeholder, .survey .right #userInfo textarea::placeholder {
+  opacity: 0.7;
+}
+.survey .right #userInfo input:hover, .survey .right #userInfo textarea:hover {
+  background: #e0e0e0;
+}
+.survey .right #userInfo input:focus, .survey .right #userInfo input:active, .survey .right #userInfo textarea:focus, .survey .right #userInfo textarea:active {
+  cursor: text;
+  background: white;
+}
+.survey .right #userInfo input {
+  height: 45px;
+}
+.survey .right #userInfo.active {
+  pointer-events: visible;
+  opacity: 1;
+  top: 65px;
+}
+.survey .right #surveySummary {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: #496671;
+  padding: 40px 30px;
+  padding-bottom: 90px;
+  text-align: center;
+  opacity: 0;
+  top: 100%;
+  pointer-events: none;
+  transition: 0.5s;
+  overflow-y: scroll;
+}
+.survey .right #surveySummary .close {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 6px;
+  margin: -6px;
+}
+.survey .right #surveySummary h1 {
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 11px;
+}
+.survey .right #surveySummary .paragraph {
+  color: white;
+  opacity: 0.9;
+}
+.survey .right #surveySummary button {
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+  background: #354D57;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  outline: none;
+}
+.survey .right #surveySummary button:hover {
+  transform: scale(1.01);
+  background: rgb(61, 95, 121);
+}
+.survey .right #surveySummary.active {
   pointer-events: visible;
   opacity: 1;
   top: 65px;

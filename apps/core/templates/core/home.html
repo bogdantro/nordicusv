@@ -42,94 +42,116 @@
       <h1 class="heading">Here are your tools to order the survey</h1>
     </div>
 
-    <!-- Step 1 -->
-    <div class="step one" id="stepOne" onclick="stepOneOpen()">
-      <h1>Create route</h1>
-    </div>
-    <div class="make-route" id="makeRoute">
-      <div onclick="stepOneClose()" class="close"><i class="fa-solid fa-x"></i></div>
-      <h1>Create route</h1>
-      <p class="paragraph">Draw a route on the map to your left. Draw only one route per survey. Please check that the coordinates are correct before proceeding</p>
-      <br>
-      <div class="alert-danger" id="makeRouteError" style="display: none;">You need to draw a route, or enter your own coordinates in order to save</div>
-      <br>
-      <textarea readonly name="" id="routeCords" cols="30" rows="10" placeholder="The cords of the route that you draw, will show here"></textarea>
-      <br>
-      <br>
-      <p class="paragraph">You can also use the input below to enter your own coordinates<br>Check the example below</p>
-      <br>
-      <textarea name="" id="customCords" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
-      <br>
-      <button onclick="validateStepOne()">Save</button>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="step two" onclick="stepTwoOpen()">
-      <h1>Add sensors</h1>
-    </div>
-    <div class="add-sensors" id="addSensors">
-      <div onclick="stepTwoClose()" class="close"><i class="fa-solid fa-x"></i></div>
-      <h1>Add sensors</h1>
-      <p class="paragraph">Choose what sensors you want, and how long to use them for<br><br>One waypoint is one blue dot on the map. If you entered custom coordinates, use the coordinates instead of waypoint number</p>
-      <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>
-      <br>
-      <!-- Available sensors -->
-      <div class="availble-sensors">
-        <p class="headingp">Sensors available</p>
-        
-        <hr style="border-color: rgba(250,250,250,0.45);">
-        <div class="sensor">
-          <p class="name">Sensor 1</p>
-          <p class="price">20 000kr</p>
-        </div>
-        <hr style="border-color: rgba(250,250,250,0.45);">
-            
-        <hr style="border-color: rgba(250,250,250,0.45); margin-top: 30px;">
-        <div class="sensor">
-          <p class="name">Sensor 2</p>
-          <p class="price">8000kr</p>
-        </div>
-        <hr style="border-color: rgba(250,250,250,0.45);">
-
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.errors}}
+      <!-- Step 1 -->
+      <div class="step one" id="stepOne" onclick="stepOneOpen()">
+        <h1>Create route</h1>
       </div>
-      <br>
-      <!-- Choose sensors -->
-      <div class="choose-sensors">
-        <label for="sensor1">Configure sensor 1</label>
+      <div class="make-route" id="makeRoute">
+        <div onclick="stepOneClose()" class="close"><i class="fa-solid fa-x"></i></div>
+        <h1>Create route</h1>
+        <p class="paragraph">Draw a route on the map to your left. Draw only one route per survey. Please check that the coordinates are correct before proceeding</p>
         <br>
-        <input type="text" placeholder="From waypoint to waypoint" class="sensor-input">
+        <textarea readonly name="route_cords" id="routeCords" cols="30" rows="10" placeholder="The cords of the route that you draw, will show here"></textarea>
         <br>
         <br>
-        <label for="sensor1">Configure sensor 2</label>
+        <p class="paragraph">You can also use the input below to enter your own coordinates<br>Check the example below</p>
         <br>
-        <input type="text" placeholder="From waypoint to waypoint" class="sensor-input">
+        <textarea name="custom_cords" id="customCords" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
+        <br>
+        <br>
+        <div class="alert-danger" id="makeRouteError" style="display: none;">You need to draw a route, or enter your own coordinates in order to save</div>
+        <button type="button" onclick="validateStepOne()">Save</button>
       </div>
-      <br>
-      <button onclick="validateStepTwo()">Save</button>
-    </div>
 
-    <!-- Step 3 -->
-    <div class="step three" onclick="stepThreeOpen()">
-      <h1>Set time/date</h1>
-    </div>
-    <div class="set-time" id="setTime">
-      <div onclick="stepThreeClose()" class="close"><i class="fa-solid fa-x"></i></div>
-      <h1>Set time/date</h1>
-      <p class="paragraph">Set the time and date when the survey will take place</p>
-      <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to choose a date and time in order to save</div>
-      <br>
-      <button onclick="validateStepThree()">Save</button>
-    </div>
+      <!-- Step 2 -->
+      <div class="step two" onclick="stepTwoOpen()">
+        <h1>Add sensors</h1>
+      </div>
+      <div class="add-sensors" id="addSensors">
+        <div onclick="stepTwoClose()" class="close"><i class="fa-solid fa-x"></i></div>
+        <h1>Add sensors</h1>
+        <p class="paragraph">Choose what sensors you want, and how long to use them for<br><br>One waypoint is one blue dot on the map. If you entered custom coordinates, use the coordinates instead of waypoint number</p>
+        <br>
+        <!-- Available sensors -->
+        <div class="availble-sensors">
+          <p class="headingp">Sensors available</p>
+          
+          <hr style="border-color: rgba(250,250,250,0.45);">
+          <div class="sensor">
+            <p class="name">Sensor 1</p>
+            <p class="price">20 000kr</p>
+          </div>
+          <hr style="border-color: rgba(250,250,250,0.45);">
 
-    <!-- Step 4 -->
-    <div class="step four">
-      <h1>Information</h1>
-    </div>
+        </div>
+        <br>
+        <!-- Choose sensors -->
+        <div class="choose-sensors">
+          <label for="sensor1">Configure sensor 1</label>
+          <br>
+          <input type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="From waypoint to waypoint" class="sensor-input">
+          <br>
+          <br>
+          <input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Choose the depth for the sensors" class="sensor-input">
+        </div>
+        <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>
+        <button type="button" onclick="validateStepTwo()">Save</button>
+      </div>
 
-    <!-- Step 5 -->
-    <div class="step five">
-      <h1>Summary</h1>
-    </div>
+      <!-- Step 3 -->
+      <div class="step three" onclick="stepThreeOpen()">
+        <h1>Set time/date</h1>
+      </div>
+      <div class="set-time" id="setTime">
+        <div onclick="stepThreeClose()" class="close"><i class="fa-solid fa-x"></i></div>
+        <h1>Set time/date</h1>
+        <p class="paragraph">Set the time and date when the survey will take place</p>
+        <br>
+        <input type="datetime-local" id="time" name="time">
+        <br>
+        <br>
+        <div class="alert-danger" id="setTimeError" style="display: none; margin-top: 18px;">You need to choose a date and time in order to save</div>
+        <button type="button" onclick="validateStepThree()">Save</button>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step four" onclick="stepFourOpen()">
+        <h1>Your info</h1>
+      </div>
+      <div class="user-info" id="userInfo">
+        <div onclick="stepFourClose()" class="close"><i class="fa-solid fa-x"></i></div>
+        <h1>Your info</h1>
+        <input type="text" name="user_html" id="user_html" style="display: none;" value="{{request.user.username}}" placeholder="Your username">
+        <br>
+        <input class="user-info-input" type="text" name="name" id="name" placeholder="Your full name" value="{{request.user.get_full_name}}">
+        <br>
+        <br>
+        <input class="user-info-input" type="email" name="email" id="email" placeholder="Your email" value="{{request.user.email}}">
+        <br>
+        <br>
+        <textarea class="user-info-input-m" name="message" id="message" cols="30" rows="10" placeholder="Reason or goal for this survey"></textarea>
+        <br>
+        <br>
+        <div class="alert-danger" id="userInfoError" style="display: none;">You need to fill out this form before sending the survey</div>
+        <button type="button" onclick="validateStepFour()">Save</button>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step five" onclick="stepFiveOpen()">
+        <h1>Summary</h1>
+      </div>
+      <div class="summary" id="surveySummary">
+        <div onclick="stepFiveClose()" class="close"><i class="fa-solid fa-x"></i></div>
+        <h1>Summary</h1>
+        <p class="paragraph">Take a look at your survey, and make some changes if you need before sending the survey</p>
+        <br>
+
+        <button type="submit">Send survey</button>
+      </div>
+  </form>
 </div>
 
 
@@ -315,34 +337,3 @@
 
 {% endblock %}
  
-<center>
-    designen av denne siden skal selvsagt bli redesignet. Dette er bare en type demo, sånn at du får en idee.
-    <br>
-    <br>
-    etter du har sendt inn bildet, kan du sjekke den i admin siden, under "Imags". Dette vil etterhvert bli endret til
-    <br>
-    "Orders". der kan du se all info du trenger
-</center>
-<hr>
-<br>
-<div class="form">
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-         {{ form.as_p }}
-        <button type="submit">Upload</button>
-      </form>
-      
-      {% if img_obj %}
-        <h3>Succesfully uploaded : {{img_obj.title}}</h3>
-        <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
-      {% endif %}
-    <div class="right">
-        her skal resten av informasjonen stå
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-</div>

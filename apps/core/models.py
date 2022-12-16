@@ -4,19 +4,25 @@ from django.contrib.auth.models import User
 from django.utils import tree
 
 class Order(models.Model):
+    # User info
     user = models.ForeignKey(User, related_name='orders', on_delete=models.SET_NULL, blank=True, null=True)
     user_html = models.CharField(max_length=100, blank=True)
-    cords = models.TextField()
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
+    # Survey info
     message = models.CharField(max_length=700, blank=True)
     price = models.FloatField(max_length=300, default=0)
+    time = models.DateTimeField(blank=False)
+    route_cords = models.TextField(blank=True)
+    custom_cords = models.TextField(blank=True)
+    # Sensors
+    sensor_1_waypoins = models.TextField()
+    sensor_1_depth = models.TextField()
+    # Admin
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
-    # FOR UI/UX * MUST BE LIKE THIS, SO THE USER CAN NAVIGATE EASIER
     is_finished = models.BooleanField(default=False)
     is_confirmed = models.BooleanField(default=False)
-    # END FOR UI/UX
     status_1 = models.BooleanField(default=False)
     status_2 = models.BooleanField(default=False)
     status_3 = models.BooleanField(default=False)
@@ -25,4 +31,4 @@ class Order(models.Model):
 
 
     def __str__(self):
-        return self.created_at
+        return self.name

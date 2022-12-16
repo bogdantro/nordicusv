@@ -13,6 +13,7 @@ from django.db.models import *
 from django.contrib.auth.decorators import *
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from .forms import Order
 
 
 
@@ -21,7 +22,21 @@ from django.conf import settings
 def home(request):
     mapbox_access_token = settings.MAP_BOX_ACCESS_TOKEN 
 
-    return render(request, 'core/home.html', { 'mapbox_access_token': mapbox_access_token })
+    if request.method == 'POST':
+        form = Order(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/myaccount/')
+    else:
+        form = Order()
+
+
+    context = {
+        'mapbox_access_token': mapbox_access_token,
+        'form': form,
+    }        
+
+    return render(request, 'core/home.html', context)
     
 
 
