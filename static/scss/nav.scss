@@ -29,8 +29,10 @@
             text-decoration: none;
             opacity: 0.8;
             cursor: pointer;
+            padding-bottom: 2px;        
+            transition: .2s;
             &:hover{
-                text-decoration: underline;
+                border-bottom: 1px solid #f4c726b4;
             }
         }
     }

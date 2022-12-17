@@ -31,7 +31,9 @@
   text-decoration: none;
   opacity: 0.8;
   cursor: pointer;
+  padding-bottom: 2px;
+  transition: 0.2s;
 }
 #desNav .menu a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid rgba(244, 199, 38, 0.7058823529);
 }/*# sourceMappingURL=nav.css.map */

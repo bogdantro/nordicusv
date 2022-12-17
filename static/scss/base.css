@@ -2,6 +2,11 @@ html, body {
   overflow-y: hidden !important;
 }
 
+#homeLink {
+  color: #F4C726 !important;
+  border-bottom: 1px solid rgba(244, 199, 38, 0.7058823529);
+}
+
 .survey {
   width: 100%;
   height: 100%;
@@ -30,7 +35,7 @@ html, body {
   width: 30%;
   height: calc(100vh - 60px);
   background: #425e68;
-  padding-inline: 15px;
+  padding-inline: 20px;
   padding-top: 19px;
   overflow-y: scroll;
   overflow-x: hidden !important;
@@ -68,32 +73,33 @@ html, body {
   opacity: 0.8;
 }
 .survey .right .info-text {
-  margin-top: 15px;
+  margin-top: 18px;
+  margin-bottom: 25px;
   text-align: center;
 }
 .survey .right .info-text .heading {
-  color: white;
-  font-size: 28px;
+  color: #F4C726;
+  font-size: 30px;
 }
 .survey .right .step {
-  padding: 7px;
+  padding: 15px 7px;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  border: 4px solid rgba(170, 170, 170, 0.6);
-  margin-block: 40px;
+  margin-block: 20px;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.2s;
+  background: #F4C726;
 }
 .survey .right .step:hover {
   transform: scale(1.02);
 }
 .survey .right .step h1 {
   text-align: center;
-  color: white;
-  font-size: 20px;
+  color: #425E68;
+  font-size: 18px;
   margin: auto;
 }
 .survey .right #makeRoute {
@@ -155,19 +161,19 @@ html, body {
   margin-top: 25px;
   width: 100%;
   height: 60px;
-  background: #354D57;
-  color: white;
-  border: 1px solid white;
+  background: #F4C726;
+  color: #354D57;
   border-radius: 4px;
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
   transition: 0.4s;
   outline: none;
+  border: none;
 }
 .survey .right #makeRoute button:hover {
   transform: scale(1.01);
-  background: rgb(61, 95, 121);
+  background: #e2b81d;
 }
 .survey .right #makeRoute.active {
   pointer-events: visible;
@@ -214,19 +220,19 @@ html, body {
   margin-top: 25px;
   width: 100%;
   height: 60px;
-  background: #354D57;
-  color: white;
-  border: 1px solid white;
+  background: #F4C726;
+  color: #354D57;
   border-radius: 4px;
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
   transition: 0.4s;
   outline: none;
+  border: none;
 }
 .survey .right #addSensors button:hover {
   transform: scale(1.01);
-  background: rgb(61, 95, 121);
+  background: #e2b81d;
 }
 .survey .right #addSensors .availble-sensors .headingp {
   color: white;
@@ -248,16 +254,16 @@ html, body {
   opacity: 0.7;
   margin-bottom: 0;
 }
-.survey .right #addSensors .choose-sensors {
+.survey .right #addSensors .configure-waypoint {
   text-align: left;
 }
-.survey .right #addSensors .choose-sensors label {
+.survey .right #addSensors .configure-waypoint label {
   color: white;
   font-size: 16px;
   opacity: 0.7;
   margin-bottom: 11px;
 }
-.survey .right #addSensors .choose-sensors input {
+.survey .right #addSensors .configure-waypoint input {
   width: 80%;
   height: 42px;
   border-radius: 4px;
@@ -268,13 +274,13 @@ html, body {
   outline: none;
   font-size: 15px;
 }
-.survey .right #addSensors .choose-sensors input::-moz-placeholder {
+.survey .right #addSensors .configure-waypoint input::-moz-placeholder {
   opacity: 0.7;
 }
-.survey .right #addSensors .choose-sensors input:-ms-input-placeholder {
+.survey .right #addSensors .configure-waypoint input:-ms-input-placeholder {
   opacity: 0.7;
 }
-.survey .right #addSensors .choose-sensors input::placeholder {
+.survey .right #addSensors .configure-waypoint input::placeholder {
   opacity: 0.7;
 }
 .survey .right #addSensors.active {
@@ -322,19 +328,19 @@ html, body {
   margin-top: 25px;
   width: 100%;
   height: 60px;
-  background: #354D57;
-  color: white;
-  border: 1px solid white;
+  background: #F4C726;
+  color: #354D57;
   border-radius: 4px;
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
   transition: 0.4s;
   outline: none;
+  border: none;
 }
 .survey .right #setTime button:hover {
   transform: scale(1.01);
-  background: rgb(61, 95, 121);
+  background: #e2b81d;
 }
 .survey .right #setTime #time {
   width: 70%;
@@ -387,19 +393,19 @@ html, body {
   margin-top: 25px;
   width: 100%;
   height: 60px;
-  background: #354D57;
-  color: white;
-  border: 1px solid white;
+  background: #F4C726;
+  color: #354D57;
   border-radius: 4px;
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
   transition: 0.4s;
   outline: none;
+  border: none;
 }
 .survey .right #userInfo button:hover {
   transform: scale(1.01);
-  background: rgb(61, 95, 121);
+  background: #e2b81d;
 }
 .survey .right #userInfo input, .survey .right #userInfo textarea {
   color: #183B56;
@@ -475,19 +481,19 @@ html, body {
   margin-top: 25px;
   width: 100%;
   height: 60px;
-  background: #354D57;
-  color: white;
-  border: 1px solid white;
+  background: #F4C726;
+  color: #354D57;
   border-radius: 4px;
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
   transition: 0.4s;
   outline: none;
+  border: none;
 }
 .survey .right #surveySummary button:hover {
   transform: scale(1.01);
-  background: rgb(61, 95, 121);
+  background: #e2b81d;
 }
 .survey .right #surveySummary.active {
   pointer-events: visible;
