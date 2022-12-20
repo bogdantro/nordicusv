@@ -2,3 +2,26 @@
     color: #F4C726 !important;
     border-bottom: 1px solid #f4c726b4;
 }
+
+.myaccount{
+    background: #425e68;
+    width: 100%;
+    height: calc(100vh - 60px);
+    .account-card{
+        padding-top: 50px;
+        .your-info{
+            text-align: center;
+            .heading{
+                color: #FAF9F6;
+                font-size: 26px;
+                span{
+                    font-weight: 800;
+                }
+            }
+        }
+        .orders{
+            text-align: center;
+            margin: auto;
+        }
+    }
+}

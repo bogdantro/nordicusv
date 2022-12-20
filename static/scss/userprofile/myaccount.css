@@ -1,4 +1,27 @@
 #myaccountLink {
   color: #F4C726 !important;
   border-bottom: 1px solid rgba(244, 199, 38, 0.7058823529);
+}
+
+.myaccount {
+  background: #425e68;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+.myaccount .account-card {
+  padding-top: 50px;
+}
+.myaccount .account-card .your-info {
+  text-align: center;
+}
+.myaccount .account-card .your-info .heading {
+  color: #FAF9F6;
+  font-size: 26px;
+}
+.myaccount .account-card .your-info .heading span {
+  font-weight: 800;
+}
+.myaccount .account-card .orders {
+  text-align: center;
+  margin: auto;
 }/*# sourceMappingURL=myaccount.css.map */

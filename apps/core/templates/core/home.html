@@ -18,28 +18,9 @@
   </div>
   <!-- Right -->
   <div class="right">
-    <!-- Top row -->
-    <div class="top-row">
-      <!-- User -->
-      <div class="user">
-        <h3>Welcome {{request.user.first_name}}</h3>
-        {% if request.user.image %}
-        <img src="{{request.user.image}}" alt="" class="user-img">
-        {% else %}
-        <img src="{% static 'images/user/default-user.png' %}" alt="" class="user-img">
-        {% endif %}
-      </div>
-
-      <hr style="border-color: rgba(250,250,250,0.45);">
-
-      <!-- Before start -->
-      <div class="before-start">
-        <h3>Before you start we recommend you watch <a href="">this video</a> that showcases how to use our services</h3>
-      </div>
-    </div>
-    <hr style="border-color: rgba(250,250,250,0.45);">
     <div class="info-text">
       <h1 class="heading">Here are your tools to order the survey</h1>
+      <p class="paragraph">We recommend to watch <a href="">this video</a> before you start</p>
     </div>
 
     <form action="" method="POST" enctype="multipart/form-data">
@@ -96,12 +77,13 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors - Example: sensor 1, sensor 5" class="sensor-input">
           <br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Choose start and end - Example: From waypoint 1 to 6" class="sensor-input">
-          <br>
-          <br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
           <br>
           <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
           <label for="sensor1">Configure waypoint 2</label>
           <br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors - Example: sensor 1, sensor 5" class="sensor-input">
@@ -169,7 +151,6 @@
       </div>
   </form>
 </div>
-
 
 <script>
 
