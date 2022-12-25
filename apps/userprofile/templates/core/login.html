@@ -12,43 +12,37 @@
     window.onload = function(){ 
     setTimeout(() => {
         window.location.replace("/");
-
-    }, 450);
+    }, 150);
     }
 </script>
 {% else %}
 <div class="login page-for-form">
-    <div class="left">
-        <img src="{% static 'images/other/ocean.jpg' %}" alt="">
-    </div>
-    <div class="right">
-        <!-- USER LOGIN -->
-        <form id="loginForm" method="post">
-            <div class="text">
-                <h1 class="heading">Log into your account</h1>
-                <p class="paragraph">In order to acess our survey services, you must have an active account. If you run into any problems, please contact us at <a href="mailto:info@nordicusv.com">info@nordicusv.com</a></p>
-            </div>
-            {% csrf_token %}
-            <!-- USER LOGIN FORM INPUTS -->
-            <div class="inputs">
-                {% if form.errors %}
-                    <div class="alert alert-danger">
-                        <strong>Brukernavn eller passord er feil</strong>
-                    </div>
-                {% endif %}
-                <!-- NAME -->
-                <input type="text" placeholder="Your username" id="username" name="username" required oninvalid="this.setCustomValidity('Please fill this in')" oninput="this.setCustomValidity('')">
-                <br>
-                <!-- PASSWORD -->
-                <input type="password" placeholder="Your password" id="password" name="password" required oninvalid="this.setCustomValidity('How else will you login next time?')" oninput="this.setCustomValidity('')">
-            </div> 
-            <div class="form-actions">
-                <button type='submit'>Login</button>
-            </div>
+    <!-- USER LOGIN -->
+    <form id="loginForm" method="post">
+        <div class="text">
+            <h1 class="heading">Log into your account</h1>
+            <p class="paragraph">In order to acess our survey services, you must have an active account. If you run into any problems, please contact us at <a href="mailto:info@nordicusv.com">info@nordicusv.com</a></p>
+        </div>
+        {% csrf_token %}
+        <!-- USER LOGIN FORM INPUTS -->
+        <div class="inputs">
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Brukernavn eller passord er feil</strong>
+                </div>
+            {% endif %}
+            <!-- NAME -->
+            <input type="text" placeholder="Your username" id="username" name="username" required oninvalid="this.setCustomValidity('Please fill this in')" oninput="this.setCustomValidity('')">
             <br>
-            <a href="/signup/" class="signup">Or make an account</a>
-        </form>
-    </div>
+            <!-- PASSWORD -->
+            <input type="password" placeholder="Your password" id="password" name="password" required oninvalid="this.setCustomValidity('How else will you login next time?')" oninput="this.setCustomValidity('')">
+        </div> 
+        <div class="form-actions">
+            <button type='submit'>Login</button>
+        </div>
+        <br>
+        <a href="/signup/" class="signup">Or make an account</a>
+    </form>
 </div>
 {% endif %}
 

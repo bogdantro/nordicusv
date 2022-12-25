@@ -14,7 +14,7 @@ html, body {
   justify-content: space-between;
 }
 .survey .left {
-  width: 70%;
+  width: 67%;
   position: relative;
 }
 .survey .left #map {
@@ -32,7 +32,7 @@ html, body {
   pointer-events: none;
 }
 .survey .right {
-  width: 30%;
+  width: 33%;
   height: calc(100vh - 60px);
   background: #425e68;
   padding-inline: 20px;
@@ -83,7 +83,7 @@ html, body {
   cursor: pointer;
   transition: 0.2s;
   background: rgba(255, 255, 255, 0.1);
-  margin: 30px auto;
+  margin: 33px auto;
 }
 .survey .right .step:hover {
   transform: scale(1.02);
@@ -95,7 +95,7 @@ html, body {
   margin: auto;
 }
 .survey .right #makeRoute {
-  width: 30%;
+  width: 33%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -173,7 +173,7 @@ html, body {
   top: 65px;
 }
 .survey .right #addSensors {
-  width: 30%;
+  width: 33%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -302,7 +302,7 @@ html, body {
   top: 65px;
 }
 .survey .right #setTime {
-  width: 30%;
+  width: 33%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -371,7 +371,7 @@ html, body {
   top: 65px;
 }
 .survey .right #userInfo {
-  width: 30%;
+  width: 33%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -455,7 +455,7 @@ html, body {
   top: 65px;
 }
 .survey .right #surveySummary {
-  width: 30%;
+  width: 33%;
   height: 100%;
   position: absolute;
   top: 0;

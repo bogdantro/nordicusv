@@ -17,7 +17,7 @@
     <div id='map'></div>
   </div>
   <!-- Right -->
-  <div class="right">
+  <div class="right" onclick="mapToSatellite()">
     <div class="info-text">
       <h1 class="heading">Here are your tools to order the survey</h1>
       <p class="paragraph">We recommend to watch <a href="">this video</a> before you start</p>
@@ -152,14 +152,20 @@
   </form>
 </div>
 
+<button onclick="mapToSatellite()">fs</button>
+
 <script>
 
 
   // Add your Mapbox access token
   mapboxgl.accessToken = '{{mapbox_access_token}}';
-    const map = new mapboxgl.Map({
+  let view = 'mapbox://styles/mapbox/outdoors-v12' // Specify which map style to use
+  function mapToSatellite(){
+    view = 'mapbox://styles/mapbox/satellite-streets-v12'
+  }
+  const map = new mapboxgl.Map({
       container: 'map', // Specify the container ID
-      style: 'mapbox://styles/mapbox/outdoors-v12', // Specify which map style to use
+      style: view,
       center: [5.359434, 60.389809], // Specify the starting position
       zoom: 9, // Specify the starting zoom
     });

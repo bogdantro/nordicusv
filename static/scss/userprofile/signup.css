@@ -1,6 +1,10 @@
+#signupLink {
+  color: #F4C726 !important;
+  border-bottom: 1px solid rgba(244, 199, 38, 0.7058823529);
+}
+
 .signup {
-  position: relative;
-  top: 20px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -11,8 +15,11 @@
   text-align: center;
 }
 .signup .text .paragraph {
-  margin-right: 0 !important;
-  text-align: center;
+  width: 460px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 3px;
 }
 .signup .text .heading {
   color: #183B56;

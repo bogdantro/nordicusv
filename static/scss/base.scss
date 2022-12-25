@@ -14,7 +14,7 @@ html, body {
     justify-content: space-between;
     // Left
     .left{
-        width: 70%;
+        width: 67%;
         position: relative;
         #map{
             width: 100%;
@@ -33,7 +33,7 @@ html, body {
     }
     // Right
     .right{
-        width: 30%;
+        width: 33%;
         height: calc(100vh - 60px);
         background: #425e68;
         padding-inline: 20px;
@@ -81,7 +81,7 @@ html, body {
             cursor: pointer;
             transition: .2s;
             background: rgba(255,255,255,0.1);
-            margin: 30px auto;
+            margin: 33px auto;
             &:hover{
                 transform: scale(1.02);
             }
@@ -94,7 +94,7 @@ html, body {
         }
         // Make route
         #makeRoute{
-            width: 30%;
+            width: 33%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -168,7 +168,7 @@ html, body {
         
         // Add sensors
         #addSensors{
-            width: 30%;
+            width: 33%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -293,7 +293,7 @@ html, body {
 
         // Set date/time
         #setTime{
-            width: 30%;
+            width: 33%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -364,7 +364,7 @@ html, body {
 
         // User info
         #userInfo{
-            width: 30%;
+            width: 33%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -444,7 +444,7 @@ html, body {
 
         // Survey summary
         #surveySummary{
-            width: 30%;
+            width: 33%;
             height: 100%;
             position: absolute;
             top: 0;
