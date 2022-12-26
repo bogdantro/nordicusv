@@ -74,25 +74,31 @@
 
           <label for="sensor1">Configure waypoint 1</label>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors - Example: sensor 1, sensor 5" class="sensor-input">
+          <input onclick="chooseSensorDrop()" type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
           <br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
           <br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
           <br>
           <br>
 
-          <label for="sensor1">Configure waypoint 2</label>
+          <!-- <label for="sensor1">Configure waypoint 2</label>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors - Example: sensor 1, sensor 5" class="sensor-input">
+          <input onclick="chooseSensorDrop()" type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
           <br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Choose start and end - Example: From waypoint 1 to 6" class="sensor-input">
+          <input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
           <br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea> -->
           
         </div>
         <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>

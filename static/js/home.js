@@ -51,6 +51,25 @@ function validateStepTwo(){
         addSensorError.style.display = 'block';        
     }
 }
+function chooseSensorDrop(){
+    const dropInput = document.getElementById('sensor_1_waypoins');
+    const chooseSensor = document.getElementById('chooseSensor');
+
+    dropInput.style.borderBottomLeftRadius = '0';
+
+    chooseSensor.style.display = 'block';
+}
+function chooseSensor1(){
+    const dropInput = document.getElementById('sensor_1_waypoins');
+    const chooseSensor = document.getElementById('chooseSensor');
+
+    dropInput.style.borderBottomLeftRadius = '4px';
+
+    dropInput.value = 'Sensor 1';
+
+    chooseSensor.style.display = 'none';
+}
+
 
 // Set date/time
 function stepThreeOpen(){
@@ -108,3 +127,4 @@ function stepFiveClose(){
 
     surveySummary.classList.remove('active');
 }
+
