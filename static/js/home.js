@@ -52,7 +52,7 @@ function validateStepTwo(){
     }
 }
 function chooseSensorDrop(){
-    const dropInput = document.getElementById('sensor_1_waypoins');
+    const dropInput = document.getElementById('waypoint_1_sensor');
     const chooseSensor = document.getElementById('chooseSensor');
 
     dropInput.style.borderBottomLeftRadius = '0';
@@ -60,7 +60,7 @@ function chooseSensorDrop(){
     chooseSensor.style.display = 'block';
 }
 function chooseSensor1(){
-    const dropInput = document.getElementById('sensor_1_waypoins');
+    const dropInput = document.getElementById('waypoint_1_sensor');
     const chooseSensor = document.getElementById('chooseSensor');
 
     dropInput.style.borderBottomLeftRadius = '4px';

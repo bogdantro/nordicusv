@@ -9,7 +9,7 @@ class Order(forms.ModelForm):
     class Meta:
         model = Order
         fields = (
-        'name', 'email', 'message', 'route_cords', 'user_html', 
+        'name', 'email', 'message', 'route_cords', 'onetime', 'onetime_time', 'interval', 'interval_time', 'user_html', 
         # Cords
         'custom_cords_1',
         'custom_cords_2',

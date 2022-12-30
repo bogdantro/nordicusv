@@ -10,76 +10,76 @@ class Order(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     # Survey info
-    message = models.CharField(max_length=700, blank=True)
+    message = models.TextField(blank=True)
     price = models.FloatField(max_length=300, default=0)
     route_cords = models.TextField(blank=True)
     # Time
     onetime = models.BooleanField(default=True)
-    onetime_time = models.DateTimeField(blank=False)
+    onetime_time = models.DateTimeField(blank=True)
     interval = models.BooleanField(default=False)
-    interval_time = models.DateTimeField(blank=False)
+    interval_time = models.CharField(max_length=1000, blank=True)
     # Custom Cords
-    custom_cords_1 = models.CharField(max_length=1000)
-    custom_cords_2 = models.CharField(max_length=1000)
-    custom_cords_3 = models.CharField(max_length=1000)
-    custom_cords_4 = models.CharField(max_length=1000)
-    custom_cords_5 = models.CharField(max_length=1000)
-    custom_cords_6 = models.CharField(max_length=1000)
-    custom_cords_7 = models.CharField(max_length=1000)
-    custom_cords_8 = models.CharField(max_length=1000)
-    custom_cords_9 = models.CharField(max_length=1000)
-    custom_cords_10 = models.CharField(max_length=1000)
+    custom_cords_1 = models.CharField(max_length=1000, blank=True)
+    custom_cords_2 = models.CharField(max_length=1000, blank=True)
+    custom_cords_3 = models.CharField(max_length=1000, blank=True)
+    custom_cords_4 = models.CharField(max_length=1000, blank=True)
+    custom_cords_5 = models.CharField(max_length=1000, blank=True)
+    custom_cords_6 = models.CharField(max_length=1000, blank=True)
+    custom_cords_7 = models.CharField(max_length=1000, blank=True)
+    custom_cords_8 = models.CharField(max_length=1000, blank=True)
+    custom_cords_9 = models.CharField(max_length=1000, blank=True)
+    custom_cords_10 = models.CharField(max_length=1000, blank=True)
     
     # Sensors
     # Waypoint 1
-    waypoint_1_sensor = models.CharField(max_length=1000)
-    waypoint_1_sensor_depth = models.CharField(max_length=1000)
-    waypoint_1_sensor_message = models.TextField()
+    waypoint_1_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_1_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_1_sensor_message = models.TextField(blank=True)
 
     # Waypoint 2
-    waypoint_2_sensor = models.CharField(max_length=1000)
-    waypoint_2_sensor_depth = models.CharField(max_length=1000)
-    waypoint_2_sensor_message = models.TextField()
+    waypoint_2_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_2_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_2_sensor_message = models.TextField(blank=True)
 
     # Waypoint 3
-    waypoint_3_sensor = models.CharField(max_length=1000)
-    waypoint_3_sensor_depth = models.CharField(max_length=1000)
-    waypoint_3_sensor_message = models.TextField()
+    waypoint_3_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_3_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_3_sensor_message = models.TextField(blank=True)
 
     # Waypoint 4
-    waypoint_4_sensor = models.CharField(max_length=1000)
-    waypoint_4_sensor_depth = models.CharField(max_length=1000)
-    waypoint_4_sensor_message = models.TextField()
+    waypoint_4_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_4_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_4_sensor_message = models.TextField(blank=True)
 
     # Waypoint 5
-    waypoint_5_sensor = models.CharField(max_length=1000)
-    waypoint_5_sensor_depth = models.CharField(max_length=1000)
-    waypoint_5_sensor_message = models.TextField()
+    waypoint_5_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_5_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_5_sensor_message = models.TextField(blank=True)
 
     # Waypoint 6
-    waypoint_6_sensor = models.CharField(max_length=1000)
-    waypoint_6_sensor_depth = models.CharField(max_length=1000)
-    waypoint_6_sensor_message = models.TextField()
+    waypoint_6_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_6_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_6_sensor_message = models.TextField(blank=True)
 
     # Waypoint 7
-    waypoint_7_sensor = models.CharField(max_length=1000)
-    waypoint_7_sensor_depth = models.CharField(max_length=1000)
-    waypoint_7_sensor_message = models.TextField()
+    waypoint_7_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_7_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_7_sensor_message = models.TextField(blank=True)
 
     # Waypoint 8
-    waypoint_8_sensor = models.CharField(max_length=1000)
-    waypoint_8_sensor_depth = models.CharField(max_length=1000)
-    waypoint_8_sensor_message = models.TextField()
+    waypoint_8_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_8_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_8_sensor_message = models.TextField(blank=True)
 
     # Waypoint 9
-    waypoint_9_sensor = models.CharField(max_length=1000)
-    waypoint_9_sensor_depth = models.CharField(max_length=1000)
-    waypoint_9_sensor_message = models.TextField()
+    waypoint_9_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_9_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_9_sensor_message = models.TextField(blank=True)
 
     # Waypoint 10
-    waypoint_10_sensor = models.CharField(max_length=1000)
-    waypoint_10_sensor_depth = models.CharField(max_length=1000)
-    waypoint_10_sensor_message = models.TextField()
+    waypoint_10_sensor = models.CharField(max_length=1000, blank=True)
+    waypoint_10_sensor_depth = models.CharField(max_length=1000, blank=True)
+    waypoint_10_sensor_message = models.TextField(blank=True)
     
     # Admin
     created_at = models.DateTimeField(auto_now_add=True)

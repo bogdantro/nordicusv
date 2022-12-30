@@ -12,9 +12,9 @@ class OrderAdmin(admin.ModelAdmin):
           'fields': ('user', 'user_html', 'name', 'email',)
       }),
       ('Survey info', {
-          'fields': ('message', 'price',)
+          'fields': ('price', 'message',)
       }),
-      ('Cordinates', {
+      ('Route cordinates', {
           'fields': ('route_cords',)
       }),
       ('Custom cordinates', {
@@ -32,7 +32,7 @@ class OrderAdmin(admin.ModelAdmin):
           )
       }),
       ('Time', {
-          'fields': ('time',)
+          'fields': ('onetime', 'interval', 'onetime_time', 'interval_time',)
       }),
       ('Waypoint 1 sensors', {
           'fields': (
