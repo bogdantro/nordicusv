@@ -38,9 +38,36 @@
         <textarea readonly name="route_cords" id="routeCords" cols="30" rows="10" placeholder="The cords of the route that you draw, will show here"></textarea>
         <br>
         <br>
-        <p class="paragraph">You can also use the input below to enter your own coordinates<br>Check the example below</p>
+        <p class="paragraph">You can also use the input below to enter your own coordinates<br>One text box is one waypoint<br><br>Write the coordinates with a comma ( , ) beetwen LAT and LONG</p>
         <br>
-        <textarea name="custom_cords" id="customCords" cols="30" rows="10" placeholder="Example:&#10;&#10;Cords1 5.038083902343061, 60.519827968169665;&#10;Cords2 5.25643717382755, 60.44811102683241"></textarea>
+        <input name="custom_cords_1" id="customCords" placeholder="Waypoint 1">
+        <br>
+        <br>
+        <input name="custom_cords_2" id="customCords" placeholder="Waypoint 2">
+        <br>
+        <br>
+        <input name="custom_cords_3" id="customCords" placeholder="Waypoint 3">
+        <br>
+        <br>
+        <input name="custom_cords_4" id="customCords" placeholder="Waypoint 4">
+        <br>
+        <br>
+        <input name="custom_cords_5" id="customCords" placeholder="Waypoint 5">
+        <br>
+        <br>
+        <input name="custom_cords_6" id="customCords" placeholder="Waypoint 6">
+        <br>
+        <br>
+        <input name="custom_cords_7" id="customCords" placeholder="Waypoint 7">
+        <br>
+        <br>
+        <input name="custom_cords_8" id="customCords" placeholder="Waypoint 8">
+        <br>
+        <br>
+        <input name="custom_cords_9" id="customCords" placeholder="Waypoint 9">
+        <br>
+        <br>
+        <input name="custom_cords_10" id="customCords" placeholder="Waypoint 10">
         <br>
         <br>
         <div class="alert-danger" id="makeRouteError" style="display: none;">You need to draw a route, or enter your own coordinates in order to save</div>
@@ -74,31 +101,154 @@
 
           <label for="sensor1">Configure waypoint 1</label>
           <br>
-          <input onclick="chooseSensorDrop()" type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors" class="sensor-input" readonly>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_1_sensor" id="waypoint_1_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
           <div id="chooseSensor">
             <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
           </div>
           <br>
           <br>
-          <input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <input type="text" name="waypoint_1_sensor_depth" id="waypoint_1_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
           <br>
           <br>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <textarea name="waypoint_1_sensor_message" id="waypoint_1_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
           <br>
           <br>
 
-          <!-- <label for="sensor1">Configure waypoint 2</label>
+          <label for="sensor1">Configure waypoint 2</label>
           <br>
-          <input onclick="chooseSensorDrop()" type="text" name="sensor_1_waypoins" id="sensor_1_waypoins" placeholder="Choose sensors" class="sensor-input" readonly>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_2_sensor" id="waypoint_2_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
           <div id="chooseSensor">
             <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
           </div>
           <br>
           <br>
-          <input type="text" name="sensor_1_depth" id="sensor_1_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <input type="text" name="waypoint_2_sensor_depth" id="waypoint_2_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
           <br>
           <br>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea> -->
+          <textarea name="waypoint_2_sensor_message" id="waypoint_2_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 3</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_3_sensor" id="waypoint_3_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_3_sensor_depth" id="waypoint_3_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_3_sensor_message" id="waypoint_3_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 4</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_4_sensor" id="waypoint_4_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_4_sensor_depth" id="waypoint_4_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_4_sensor_message" id="waypoint_4_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 5</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_5_sensor" id="waypoint_5_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_5_sensor_depth" id="waypoint_5_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_5_sensor_message" id="waypoint_5_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 6</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_6_sensor" id="waypoint_6_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_6_sensor_depth" id="waypoint_6_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_6_sensor_message" id="waypoint_6_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 7</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_7_sensor" id="waypoint_7_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_7_sensor_depth" id="waypoint_7_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_7_sensor_message" id="waypoint_7_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 8</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_8_sensor" id="waypoint_8_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_8_sensor_depth" id="waypoint_8_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_8_sensor_message" id="waypoint_8_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 9</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_9_sensor" id="waypoint_9_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_9_sensor_depth" id="waypoint_9_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_9_sensor_message" id="waypoint_9_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+
+          <label for="sensor1">Configure waypoint 10</label>
+          <br>
+          <input onclick="chooseSensorDrop()" type="text" name="waypoint_10_sensor" id="waypoint_10_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <div id="chooseSensor">
+            <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
+          </div>
+          <br>
+          <br>
+          <input type="text" name="waypoint_10_sensor_depth" id="waypoint_10_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
+          <br>
+          <br>
+          <textarea name="waypoint_10_sensor_message" id="waypoint_10_sensor_message" cols="30" rows="10" placeholder="Is there anything else we should know?" class="sensor-input"></textarea>
+          <br>
+          <br>
+          
           
         </div>
         <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>
@@ -109,12 +259,26 @@
       <div class="step three" onclick="stepThreeOpen()">
         <h1>Set time/date</h1>
       </div>
-      <div class="set-time" id="setTime">
+      <div class="set-time active" id="setTime">
         <div onclick="stepThreeClose()" class="close"><i class="fa-solid fa-x"></i></div>
         <h1>Set time/date</h1>
         <p class="paragraph">Set the time and date when the survey will take place</p>
         <br>
-        <input type="datetime-local" id="time" name="time">
+        <div class="choose-interval-or-onetime">
+          <a onclick="chooseTimeOnetime()" class="choose-interal-or-time-btn1 active">One time</a>
+          <a onclick="chooseTimeInterval()" class="choose-interal-or-time-btn2">Interval</a>
+        </div>
+
+        <input type="checkbox" id="onetime" name="onetime" checked style="display: none;">
+        <input type="checkbox" id="interval" name="interval" style="display: none;">
+
+        <br>
+        <div id="interval_div">
+          interval her
+        </div>
+        <div id="onetime_div">
+          <input type="datetime-local" id="time" name="time">
+        </div>
         <br>
         <br>
         <div class="alert-danger" id="setTimeError" style="display: none; margin-top: 18px;">You need to choose a date and time in order to save</div>

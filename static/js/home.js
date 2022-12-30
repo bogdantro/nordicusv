@@ -128,3 +128,42 @@ function stepFiveClose(){
     surveySummary.classList.remove('active');
 }
 
+function chooseTimeInterval() {
+    const btn1 = document.querySelector('.choose-interal-or-time-btn1');
+    const btn2 = document.querySelector('.choose-interal-or-time-btn2');
+
+    const intervalCheckbox = document.getElementById('interval');
+    const onetimeCheckbox = document.getElementById('onetime');
+
+    const intervalDiv = document.getElementById('interval_div');
+    const onetimeDiv = document.getElementById('onetime_div');
+
+    intervalDiv.classList.add('active');
+    onetimeDiv.classList.add('hidden');
+
+    intervalCheckbox.checked = true
+    onetimeCheckbox.checked = false
+
+    btn1.classList.remove('active');
+    btn2.classList.add('active');
+}
+
+function chooseTimeOnetime() {
+    const btn1 = document.querySelector('.choose-interal-or-time-btn1');
+    const btn2 = document.querySelector('.choose-interal-or-time-btn2');
+
+    const intervalCheckbox = document.getElementById('interval');
+    const onetimeCheckbox = document.getElementById('onetime');
+    
+    const intervalDiv = document.getElementById('interval_div');
+    const onetimeDiv = document.getElementById('onetime_div');
+
+    intervalDiv.classList.remove('active');
+    onetimeDiv.classList.remove('hidden');
+
+    intervalCheckbox.checked = false
+    onetimeCheckbox.checked = true
+
+    btn1.classList.add('active');
+    btn2.classList.remove('active');
+}
