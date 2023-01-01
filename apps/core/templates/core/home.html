@@ -25,7 +25,11 @@
 
     <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.errors}}
+    {% if form.errors %}
+    <div class="alert alert-danger">
+      {{form.errors}}
+    </div>
+    {% endif %}
       <!-- Step 1 -->
       <div class="step one" id="stepOne" onclick="stepOneOpen()">
         <h1>Create route</h1>
@@ -40,37 +44,81 @@
         <br>
         <p class="paragraph">You can also use the input below to enter your own coordinates<br>One text box is one waypoint<br><br>Write the coordinates with a comma ( , ) beetwen LAT and LONG</p>
         <br>
-        <input name="custom_cords_1" id="customCords" placeholder="Waypoint 1">
-        <br>
-        <br>
-        <input name="custom_cords_2" id="customCords" placeholder="Waypoint 2">
-        <br>
-        <br>
-        <input name="custom_cords_3" id="customCords" placeholder="Waypoint 3">
-        <br>
-        <br>
-        <input name="custom_cords_4" id="customCords" placeholder="Waypoint 4">
-        <br>
-        <br>
-        <input name="custom_cords_5" id="customCords" placeholder="Waypoint 5">
-        <br>
-        <br>
-        <input name="custom_cords_6" id="customCords" placeholder="Waypoint 6">
-        <br>
-        <br>
-        <input name="custom_cords_7" id="customCords" placeholder="Waypoint 7">
-        <br>
-        <br>
-        <input name="custom_cords_8" id="customCords" placeholder="Waypoint 8">
-        <br>
-        <br>
-        <input name="custom_cords_9" id="customCords" placeholder="Waypoint 9">
-        <br>
-        <br>
-        <input name="custom_cords_10" id="customCords" placeholder="Waypoint 10">
-        <br>
-        <br>
-        <div class="alert-danger" id="makeRouteError" style="display: none;">You need to draw a route, or enter your own coordinates in order to save</div>
+        <div class="custom-route-waypoints">
+          <input name="custom_cords_1" id="custom_cords_1" placeholder="Waypoint 1">
+          <input name="custom_cords_2" id="custom_cords_2" placeholder="Waypoint 2">
+          <input name="custom_cords_3" id="custom_cords_3" placeholder="Waypoint 3">
+          <input name="custom_cords_4" id="custom_cords_4" placeholder="Waypoint 4">
+          <input name="custom_cords_5" id="custom_cords_5" placeholder="Waypoint 5">
+          <input name="custom_cords_6" id="custom_cords_6" placeholder="Waypoint 6">
+          <input name="custom_cords_7" id="custom_cords_7" placeholder="Waypoint 7">
+          <input name="custom_cords_8" id="custom_cords_8" placeholder="Waypoint 8">
+          <input name="custom_cords_9" id="custom_cords_9" placeholder="Waypoint 9">
+          <input name="custom_cords_10" id="custom_cords_10" placeholder="Waypoint 10">
+          <input class="hidden" name="custom_cords_11" id="custom_cords_11" placeholder="Waypoint 11">
+          <input class="hidden" name="custom_cords_12" id="custom_cords_12" placeholder="Waypoint 12">
+          <input class="hidden" name="custom_cords_13" id="custom_cords_13" placeholder="Waypoint 13">
+          <input class="hidden" name="custom_cords_14" id="custom_cords_14" placeholder="Waypoint 14">
+          <input class="hidden" name="custom_cords_15" id="custom_cords_15" placeholder="Waypoint 15">
+          <input class="hidden" name="custom_cords_16" id="custom_cords_16" placeholder="Waypoint 16">
+          <input class="hidden" name="custom_cords_17" id="custom_cords_17" placeholder="Waypoint 17">
+          <input class="hidden" name="custom_cords_18" id="custom_cords_18" placeholder="Waypoint 18">
+          <input class="hidden" name="custom_cords_19" id="custom_cords_19" placeholder="Waypoint 19">
+          <input class="hidden" name="custom_cords_20" id="custom_cords_20" placeholder="Waypoint 20">
+          <input class="hidden" name="custom_cords_21" id="custom_cords_21" placeholder="Waypoint 21">
+          <input class="hidden" name="custom_cords_22" id="custom_cords_22" placeholder="Waypoint 22">
+          <input class="hidden" name="custom_cords_23" id="custom_cords_23" placeholder="Waypoint 23">
+          <input class="hidden" name="custom_cords_24" id="custom_cords_24" placeholder="Waypoint 24">
+          <input class="hidden" name="custom_cords_25" id="custom_cords_25" placeholder="Waypoint 25">
+          <input class="hidden" name="custom_cords_26" id="custom_cords_26" placeholder="Waypoint 26">
+          <input class="hidden" name="custom_cords_27" id="custom_cords_27" placeholder="Waypoint 27">
+          <input class="hidden" name="custom_cords_28" id="custom_cords_28" placeholder="Waypoint 28">
+          <input class="hidden" name="custom_cords_29" id="custom_cords_29" placeholder="Waypoint 29">
+          <input class="hidden" name="custom_cords_30" id="custom_cords_30" placeholder="Waypoint 30">
+          <input class="hidden" name="custom_cords_31" id="custom_cords_31" placeholder="Waypoint 31">
+          <input class="hidden" name="custom_cords_32" id="custom_cords_32" placeholder="Waypoint 32">
+          <input class="hidden" name="custom_cords_33" id="custom_cords_33" placeholder="Waypoint 33">
+          <input class="hidden" name="custom_cords_34" id="custom_cords_34" placeholder="Waypoint 34">
+          <input class="hidden" name="custom_cords_35" id="custom_cords_35" placeholder="Waypoint 35">
+          <input class="hidden" name="custom_cords_36" id="custom_cords_36" placeholder="Waypoint 36">
+          <input class="hidden" name="custom_cords_37" id="custom_cords_37" placeholder="Waypoint 37">
+          <input class="hidden" name="custom_cords_38" id="custom_cords_38" placeholder="Waypoint 38">
+          <input class="hidden" name="custom_cords_39" id="custom_cords_39" placeholder="Waypoint 39">
+          <input class="hidden" name="custom_cords_40" id="custom_cords_40" placeholder="Waypoint 40">
+        </div>
+        <div class="add-new-waypoint-route">
+          <button id="custom_cords_11_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint11()">New waypoint</button>
+          <button class="hidden" id="custom_cords_12_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint12()">New waypoint</button>
+          <button class="hidden" id="custom_cords_13_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint13()">New waypoint</button>
+          <button class="hidden" id="custom_cords_14_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint14()">New waypoint</button>
+          <button class="hidden" id="custom_cords_15_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint15()">New waypoint</button>
+          <button class="hidden" id="custom_cords_16_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint16()">New waypoint</button>
+          <button class="hidden" id="custom_cords_17_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint17()">New waypoint</button>
+          <button class="hidden" id="custom_cords_18_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint18()">New waypoint</button>
+          <button class="hidden" id="custom_cords_19_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint19()">New waypoint</button>
+          <button class="hidden" id="custom_cords_20_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint20()">New waypoint</button>
+          <button class="hidden" id="custom_cords_21_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint21()">New waypoint</button>
+          <button class="hidden" id="custom_cords_22_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint22()">New waypoint</button>
+          <button class="hidden" id="custom_cords_23_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint23()">New waypoint</button>
+          <button class="hidden" id="custom_cords_24_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint24()">New waypoint</button>
+          <button class="hidden" id="custom_cords_25_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint25()">New waypoint</button>
+          <button class="hidden" id="custom_cords_26_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint26()">New waypoint</button>
+          <button class="hidden" id="custom_cords_27_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint27()">New waypoint</button>
+          <button class="hidden" id="custom_cords_28_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint28()">New waypoint</button>
+          <button class="hidden" id="custom_cords_29_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint29()">New waypoint</button>
+          <button class="hidden" id="custom_cords_30_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint30()">New waypoint</button>
+          <button class="hidden" id="custom_cords_31_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint31()">New waypoint</button>
+          <button class="hidden" id="custom_cords_32_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint32()">New waypoint</button>
+          <button class="hidden" id="custom_cords_33_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint33()">New waypoint</button>
+          <button class="hidden" id="custom_cords_34_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint34()">New waypoint</button>
+          <button class="hidden" id="custom_cords_35_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint35()">New waypoint</button>
+          <button class="hidden" id="custom_cords_36_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint36()">New waypoint</button>
+          <button class="hidden" id="custom_cords_37_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint37()">New waypoint</button>
+          <button class="hidden" id="custom_cords_38_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint38()">New waypoint</button>
+          <button class="hidden" id="custom_cords_39_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint39()">New waypoint</button>
+          <button class="hidden" id="custom_cords_40_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint40()">New waypoint</button>
+        </div>
+        <div class="alert-danger" id="makeRouteError" style="display: none; margin-top: 20px;">You need to draw a route, or enter your own coordinates in order to save</div>
         <button type="button" onclick="validateStepOne()">Save</button>
       </div>
 
@@ -78,10 +126,10 @@
       <div class="step two" onclick="stepTwoOpen()">
         <h1>Add sensors</h1>
       </div>
-      <div class="add-sensors" id="addSensors">
+      <div class="add-sensors active" id="addSensors">
         <div onclick="stepTwoClose()" class="close"><i class="fa-solid fa-x"></i></div>
         <h1>Add sensors</h1>
-        <p class="paragraph">Choose what sensors you want, and how long to use them for<br><br>One waypoint is one blue dot on the map. If you entered custom coordinates, use the coordinates instead of waypoint number</p>
+        <p class="paragraph">Choose what sensors you want, and how long to use them for<br><br>One waypoint is one blue dot on the map<br>The default waypoints to configure is 10. If you have more than 10 waypoints, click on New waypoint at the bottom</p>
         <br>
         <!-- Available sensors -->
         <div class="availble-sensors">
@@ -101,10 +149,14 @@
 
           <label for="sensor1">Configure waypoint 1</label>
           <br>
-          <input onclick="chooseSensorDrop()" type="text" name="waypoint_1_sensor" id="waypoint_1_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+          <select name="waypoint_1_sensor" id="waypoint_1_sensor">
+            <option value="Sensor 1">Sensor 1</option>
+          </select>
+          <!-- <input onclick="chooseSensorDrop()" type="text" name="waypoint_1_sensor" id="waypoint_1_sensor" placeholder="Choose sensors" class="sensor-input" readonly>
+
           <div id="chooseSensor">
             <div onclick="chooseSensor1()" class="sensor-drop" id="sensor1">Sensor 1</div>
-          </div>
+          </div> -->
           <br>
           <br>
           <input type="text" name="waypoint_1_sensor_depth" id="waypoint_1_sensor_depth" placeholder="Configure the depth of the sensors in meters" class="sensor-input">
@@ -259,7 +311,7 @@
       <div class="step three" onclick="stepThreeOpen()">
         <h1>Set time/date</h1>
       </div>
-      <div class="set-time active" id="setTime">
+      <div class="set-time" id="setTime">
         <div onclick="stepThreeClose()" class="close"><i class="fa-solid fa-x"></i></div>
         <h1>Set time/date</h1>
         <p class="paragraph">Set the time and date when the survey will take place</p>

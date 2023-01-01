@@ -37,6 +37,11 @@ def home(request):
     }        
 
     return render(request, 'core/home.html', context)
+
+
+
+def test(request):
+    return render(request, 'test/test.html')
     
 
 

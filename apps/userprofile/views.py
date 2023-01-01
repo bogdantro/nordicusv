@@ -44,7 +44,7 @@ def signup(request, backend='django.contrib.auth.backends.ModelBackend'):
 
             login(request, user)
 
-            return redirect('/')
+            return redirect('/myaccount/')
     else:
         form = SignUpForm()
         userprofileform = UserprofileForm()

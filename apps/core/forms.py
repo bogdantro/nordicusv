@@ -1,6 +1,9 @@
 from django.db.models import fields
 from django import forms
 from .models import Order
+from django.db import models
+
+
 
 class Order(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -33,3 +36,4 @@ class Order(forms.ModelForm):
         'waypoint_9_sensor', 'waypoint_9_sensor_depth', 'waypoint_9_sensor_message',
         'waypoint_10_sensor', 'waypoint_10_sensor_depth', 'waypoint_10_sensor_message',
         )
+

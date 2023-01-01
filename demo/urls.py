@@ -23,5 +23,8 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('myaccount/', myaccount, name='myaccount'),
 
+    # Test
+    path('test/', test, name='test'),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

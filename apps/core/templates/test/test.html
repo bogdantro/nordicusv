@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for interest_field in form.get_interest_fields %}
+    {{ interest_field }}
+{% endfor %}
+
+{% endblock %}

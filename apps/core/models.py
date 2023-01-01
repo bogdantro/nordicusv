@@ -3,6 +3,8 @@ from datetime import date
 from django.contrib.auth.models import User
 from django.utils import tree
 
+
+
 class Order(models.Model):
     # User info
     user = models.ForeignKey(User, related_name='orders', on_delete=models.SET_NULL, blank=True, null=True)
@@ -15,7 +17,7 @@ class Order(models.Model):
     route_cords = models.TextField(blank=True)
     # Time
     onetime = models.BooleanField(default=True)
-    onetime_time = models.DateTimeField(blank=True)
+    onetime_time = models.DateTimeField(blank=True, null=True)
     interval = models.BooleanField(default=False)
     interval_time = models.CharField(max_length=1000, blank=True)
     # Custom Cords
@@ -29,6 +31,36 @@ class Order(models.Model):
     custom_cords_8 = models.CharField(max_length=1000, blank=True)
     custom_cords_9 = models.CharField(max_length=1000, blank=True)
     custom_cords_10 = models.CharField(max_length=1000, blank=True)
+    custom_cords_11 = models.CharField(max_length=1000, blank=True)
+    custom_cords_12 = models.CharField(max_length=1000, blank=True)
+    custom_cords_13 = models.CharField(max_length=1000, blank=True)
+    custom_cords_14 = models.CharField(max_length=1000, blank=True)
+    custom_cords_15 = models.CharField(max_length=1000, blank=True)
+    custom_cords_16 = models.CharField(max_length=1000, blank=True)
+    custom_cords_17 = models.CharField(max_length=1000, blank=True)
+    custom_cords_18 = models.CharField(max_length=1000, blank=True)
+    custom_cords_19 = models.CharField(max_length=1000, blank=True)
+    custom_cords_20 = models.CharField(max_length=1000, blank=True)
+    custom_cords_21 = models.CharField(max_length=1000, blank=True)
+    custom_cords_22 = models.CharField(max_length=1000, blank=True)
+    custom_cords_23 = models.CharField(max_length=1000, blank=True)
+    custom_cords_24 = models.CharField(max_length=1000, blank=True)
+    custom_cords_25 = models.CharField(max_length=1000, blank=True)
+    custom_cords_26 = models.CharField(max_length=1000, blank=True)
+    custom_cords_27 = models.CharField(max_length=1000, blank=True)
+    custom_cords_28 = models.CharField(max_length=1000, blank=True)
+    custom_cords_29 = models.CharField(max_length=1000, blank=True)
+    custom_cords_30 = models.CharField(max_length=1000, blank=True)
+    custom_cords_31 = models.CharField(max_length=1000, blank=True)
+    custom_cords_32 = models.CharField(max_length=1000, blank=True)
+    custom_cords_33 = models.CharField(max_length=1000, blank=True)
+    custom_cords_34 = models.CharField(max_length=1000, blank=True)
+    custom_cords_35 = models.CharField(max_length=1000, blank=True)
+    custom_cords_36 = models.CharField(max_length=1000, blank=True)
+    custom_cords_37 = models.CharField(max_length=1000, blank=True)
+    custom_cords_38 = models.CharField(max_length=1000, blank=True)
+    custom_cords_39 = models.CharField(max_length=1000, blank=True)
+    custom_cords_40 = models.CharField(max_length=1000, blank=True)
     
     # Sensors
     # Waypoint 1

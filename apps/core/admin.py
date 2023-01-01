@@ -7,12 +7,30 @@ from .models import *
 class OrderAdmin(admin.ModelAdmin):
     list_filter  = ['user']
     list_display =['id', 'name', 'user', 'created_at', 'paid']
+    readonly_fields = ['created_at']
     fieldsets = (
       ('User info', {
           'fields': ('user', 'user_html', 'name', 'email',)
       }),
       ('Survey info', {
           'fields': ('price', 'message',)
+      }),
+      ('Order conf', {
+          'fields': (
+            'paid',
+            'is_finished',
+            'is_confirmed',
+            'created_at',
+          )
+      }),
+      ('Order status', {
+          'fields': (
+            'status_1',
+            'status_2',
+            'status_3',
+            'status_4',
+            'status_5',
+          )
       }),
       ('Route cordinates', {
           'fields': ('route_cords',)
@@ -29,6 +47,36 @@ class OrderAdmin(admin.ModelAdmin):
             'custom_cords_8',
             'custom_cords_9',
             'custom_cords_10',
+            'custom_cords_11',
+            'custom_cords_12',
+            'custom_cords_13',
+            'custom_cords_14',
+            'custom_cords_15',
+            'custom_cords_16',
+            'custom_cords_17',
+            'custom_cords_18',
+            'custom_cords_19',
+            'custom_cords_20',
+            'custom_cords_21',
+            'custom_cords_22',
+            'custom_cords_23',
+            'custom_cords_24',
+            'custom_cords_25',
+            'custom_cords_26',
+            'custom_cords_27',
+            'custom_cords_28',
+            'custom_cords_29',
+            'custom_cords_30',
+            'custom_cords_31',
+            'custom_cords_32',
+            'custom_cords_33',
+            'custom_cords_34',
+            'custom_cords_35',
+            'custom_cords_36',
+            'custom_cords_37',
+            'custom_cords_38',
+            'custom_cords_39',
+            'custom_cords_40',
           )
       }),
       ('Time', {
@@ -102,22 +150,6 @@ class OrderAdmin(admin.ModelAdmin):
             'waypoint_10_sensor',
             'waypoint_10_sensor_depth',
             'waypoint_10_sensor_message',
-          )
-      }),
-      ('Order conf', {
-          'fields': (
-            'paid',
-            'is_finished',
-            'is_confirmed',
-          )
-      }),
-      ('Order status', {
-          'fields': (
-            'status_1',
-            'status_2',
-            'status_3',
-            'status_4',
-            'status_5',
           )
       }),
     )
