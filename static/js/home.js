@@ -557,3 +557,424 @@ function routeAddWaypoint40() {
     custom_cords_last_btn.classList.remove('visible')
 }
 //#endregion
+
+// #region NewWaypoint
+
+function sensorAddWaypoint11() {
+    const sensor = document.getElementById('waypointSensor11');
+    const sensor_last_btn = document.getElementById('waypoint_11_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_12_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint12() {
+    const sensor = document.getElementById('waypointSensor12');
+    const sensor_last_btn = document.getElementById('waypoint_12_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_13_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint13() {
+    const sensor = document.getElementById('waypointSensor13');
+    const sensor_last_btn = document.getElementById('waypoint_13_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_14_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint14() {
+    const sensor = document.getElementById('waypointSensor14');
+    const sensor_last_btn = document.getElementById('waypoint_14_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_15_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint15() {
+    const sensor = document.getElementById('waypointSensor15');
+    const sensor_last_btn = document.getElementById('waypoint_15_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_16_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint16() {
+    const sensor = document.getElementById('waypointSensor16');
+    const sensor_last_btn = document.getElementById('waypoint_16_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_17_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint17() {
+    const sensor = document.getElementById('waypointSensor17');
+    const sensor_last_btn = document.getElementById('waypoint_17_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_18_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint18() {
+    const sensor = document.getElementById('waypointSensor18');
+    const sensor_last_btn = document.getElementById('waypoint_18_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_19_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint19() {
+    const sensor = document.getElementById('waypointSensor19');
+    const sensor_last_btn = document.getElementById('waypoint_19_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_20_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint20() {
+    const sensor = document.getElementById('waypointSensor20');
+    const sensor_last_btn = document.getElementById('waypoint_20_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_21_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint21() {
+    const sensor = document.getElementById('waypointSensor21');
+    const sensor_last_btn = document.getElementById('waypoint_21_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_22_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint22() {
+    const sensor = document.getElementById('waypointSensor22');
+    const sensor_last_btn = document.getElementById('waypoint_22_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_23_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint23() {
+    const sensor = document.getElementById('waypointSensor23');
+    const sensor_last_btn = document.getElementById('waypoint_23_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_24_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint24() {
+    const sensor = document.getElementById('waypointSensor24');
+    const sensor_last_btn = document.getElementById('waypoint_24_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_25_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint25() {
+    const sensor = document.getElementById('waypointSensor25');
+    const sensor_last_btn = document.getElementById('waypoint_25_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_26_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint26() {
+    const sensor = document.getElementById('waypointSensor26');
+    const sensor_last_btn = document.getElementById('waypoint_26_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_27_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint27() {
+    const sensor = document.getElementById('waypointSensor27');
+    const sensor_last_btn = document.getElementById('waypoint_27_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_28_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint28() {
+    const sensor = document.getElementById('waypointSensor28');
+    const sensor_last_btn = document.getElementById('waypoint_28_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_29_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint29() {
+    const sensor = document.getElementById('waypointSensor29');
+    const sensor_last_btn = document.getElementById('waypoint_29_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_30_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint30() {
+    const sensor = document.getElementById('waypointSensor30');
+    const sensor_last_btn = document.getElementById('waypoint_30_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_31_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint31() {
+    const sensor = document.getElementById('waypointSensor31');
+    const sensor_last_btn = document.getElementById('waypoint_31_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_32_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint32() {
+    const sensor = document.getElementById('waypointSensor32');
+    const sensor_last_btn = document.getElementById('waypoint_32_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_33_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint33() {
+    const sensor = document.getElementById('waypointSensor33');
+    const sensor_last_btn = document.getElementById('waypoint_33_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_34_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint34() {
+    const sensor = document.getElementById('waypointSensor34');
+    const sensor_last_btn = document.getElementById('waypoint_34_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_35_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint35() {
+    const sensor = document.getElementById('waypointSensor35');
+    const sensor_last_btn = document.getElementById('waypoint_35_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_36_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint36() {
+    const sensor = document.getElementById('waypointSensor36');
+    const sensor_last_btn = document.getElementById('waypoint_36_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_37_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint37() {
+    const sensor = document.getElementById('waypointSensor37');
+    const sensor_last_btn = document.getElementById('waypoint_37_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_38_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint38() {
+    const sensor = document.getElementById('waypointSensor38');
+    const sensor_last_btn = document.getElementById('waypoint_38_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_39_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint39() {
+    const sensor = document.getElementById('waypointSensor39');
+    const sensor_last_btn = document.getElementById('waypoint_39_sensor_btn');
+    const sensor_new_btn = document.getElementById('waypoint_40_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+    
+    sensor_new_btn.classList.add('visible')
+}
+
+function sensorAddWaypoint40() {
+    const sensor = document.getElementById('waypointSensor40');
+    const sensor_last_btn = document.getElementById('waypoint_40_sensor_btn');
+
+    sensor.classList.add('visible');
+    sensor.classList.remove('hidden');
+
+    sensor_last_btn.classList.add('hidden')
+    sensor_last_btn.classList.remove('visible')
+}
+
+// #endregion

@@ -12,7 +12,18 @@ class Order(forms.ModelForm):
     class Meta:
         model = Order
         fields = (
-        'name', 'email', 'message', 'route_cords', 'onetime', 'onetime_time', 'interval', 'interval_time', 'user_html', 
+        'name', 'email', 'message', 'route_cords', 'onetime', 'onetime_time', 'interval', 'user_html',
+        # Interval
+        'date_start',
+        'date_end',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday',
+        'choose_interval',
         # Cords
         'custom_cords_1',
         'custom_cords_2',

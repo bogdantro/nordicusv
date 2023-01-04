@@ -41,7 +41,7 @@ def home(request):
 
 
 def test(request):
-    return render(request, 'test/test.html')
+    return render(request, 'test/test.svelte')
     
 
 
