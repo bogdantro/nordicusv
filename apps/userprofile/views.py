@@ -4,19 +4,18 @@ from .forms import SignUpForm, UserprofileForm
 from django.contrib.auth import login
 from textwrap import dedent
 from django.core.mail import send_mail, BadHeaderError
+from apps.core.models import Order
 
 
 @login_required
 def myaccount(request):
-    # orderFinished = Order.objects.filter(user=request.user, is_finished=True).first()
-    # orderConfirmed = Order.objects.filter(user=request.user, is_confirmed=True).first()
+    order = Order.objects.filter(user=request.user, is_confirmed=True).first()
 
-    # context = {
-    #     'orderFinished':orderFinished,
-    #     'orderConfirmed':orderConfirmed,
-    #  }
+    context = {
+        'order':order,
+     }
 
-    return render(request, 'core/myaccount.html')
+    return render(request, 'core/myaccount.html', context)
 
 # @login_required
 

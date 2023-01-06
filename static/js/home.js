@@ -82,9 +82,13 @@ function stepThreeClose(){
 function validateStepThree(){
     const setTime = document.getElementById('setTime');
     const setTimeError = document.getElementById('setTimeError');
-    const time = document.getElementById('time');
+    const time = document.getElementById('onetime_time');
+    const monday = document.getElementById('monday');
+    const tuesday = document.getElementById('tuesday');
+    const wednesday = document.getElementById('wednesday');
+    const thursday = document.getElementById('thursday');
     
-    if(time.value){
+    if(time.value || monday.value || tuesday.value || wednesday.value || thursday.value){
         setTime.classList.remove('active');
         setTimeError.style.display = 'none';
     }else{

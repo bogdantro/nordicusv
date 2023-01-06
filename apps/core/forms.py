@@ -47,4 +47,3 @@ class Order(forms.ModelForm):
         'waypoint_9_sensor', 'waypoint_9_sensor_depth', 'waypoint_9_sensor_message',
         'waypoint_10_sensor', 'waypoint_10_sensor_depth', 'waypoint_10_sensor_message',
         )
-

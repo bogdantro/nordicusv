@@ -14,7 +14,7 @@ html, body {
     justify-content: space-between;
     // Left
     .left{
-        width: 67%;
+        width: 65%;
         position: relative;
         #map{
             width: 100%;
@@ -33,7 +33,7 @@ html, body {
     }
     // Right
     .right{
-        width: 33%;
+        width: 35%;
         height: calc(100vh - 60px);
         background: #425e68;
         padding-inline: 20px;
@@ -92,9 +92,15 @@ html, body {
                 margin: auto;
             }
         }
+        form{
+            #formErrors{
+                text-align: center;
+                list-style: none;
+            }
+        }
         // Make route
         #makeRoute{
-            width: 33%;
+            width: 35%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -183,8 +189,6 @@ html, body {
                 margin-top: 25px;
                 width: 100%;
                 height: 60px;
-                background: #F4C726;
-                color: #354D57;
                 border-radius: 4px;
                 font-size: 16px;
                 padding: 3px;
@@ -192,9 +196,19 @@ html, body {
                 transition: .4s;
                 outline: none;
                 border: none;
+                color: #F4C726;
+                border: 2px solid #F4C726;
+                background: transparent;
                 &:hover{
                     transform: scale(1.01);
-                    background: #e2b81d;
+                }
+                &.primary{
+                    background: #F4C726;
+                    color: #354D57;
+                    &:hover{
+                        transform: scale(1.01);
+                        background: #e2b81d;
+                    }
                 }
                 &.hidden{
                     display: none;
@@ -212,7 +226,7 @@ html, body {
         
         // Add sensors
         #addSensors{
-            width: 33%;
+            width: 35%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -267,8 +281,6 @@ html, body {
                 margin-top: 25px;
                 width: 100%;
                 height: 60px;
-                background: #F4C726;
-                color: #354D57;
                 border-radius: 4px;
                 font-size: 16px;
                 padding: 3px;
@@ -276,9 +288,19 @@ html, body {
                 transition: .4s;
                 outline: none;
                 border: none;
+                color: #F4C726;
+                border: 2px solid #F4C726;
+                background: transparent;
                 &:hover{
                     transform: scale(1.01);
-                    background: #e2b81d;
+                }
+                &.primary{
+                    background: #F4C726;
+                    color: #354D57;
+                    &:hover{
+                        transform: scale(1.01);
+                        background: #e2b81d;
+                    }
                 }
             }
             // Availale sensors
@@ -418,7 +440,7 @@ html, body {
 
         // Set date/time
         #setTime{
-            width: 33%;
+            width: 35%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -505,14 +527,14 @@ html, body {
             #interval_div{
                 display: none;
                 input{
-                    width: 40%;
+                    width: 48%;
                     border-radius: 25px;
                     height: 50px;
                     color: #183B56;
                     border: none;
                     outline: none;
                     text-align: center;
-                    padding: 8px;
+                    padding: 9px;
                 }
                 label{
                     margin-right: 20px;
@@ -565,14 +587,14 @@ html, body {
 
         // User info
         #userInfo{
-            width: 33%;
+            width: 35%;
             height: 100%;
             position: absolute;
             top: 0;
             right: 0;
             z-index: 100;
             background: #496671;
-            padding: 40px 30px;
+            padding: 40px 35px;
             padding-bottom: 90px;
             text-align: center;
             opacity: 0;
@@ -613,6 +635,13 @@ html, body {
                     background: #e2b81d;
                 }
             }
+            label{
+                color: white;
+                font-size: 16px;
+                opacity: 0.7;
+                margin-bottom: 11px;
+                float: left;
+            }
             input, textarea{
                 color: #183B56;
                 font-size: 16px;
@@ -645,7 +674,7 @@ html, body {
 
         // Survey summary
         #surveySummary{
-            width: 33%;
+            width: 35%;
             height: 100%;
             position: absolute;
             top: 0;
@@ -695,6 +724,20 @@ html, body {
                 &:hover{
                     transform: scale(1.01);
                     background: #e2b81d;
+                }
+            }
+            .summary-block{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 77%;
+                margin: auto;
+                padding-block: 2px;
+                .name, .value{
+                    color: white;
+                    font-size: 16px;
+                    opacity: 0.7;
+                    margin-bottom: 0;
                 }
             }
             &.active{

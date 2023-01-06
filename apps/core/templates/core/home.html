@@ -26,8 +26,10 @@
     <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {% if form.errors %}
-    <div class="alert alert-danger">
-      {{form.errors}}
+    <div class="alert alert-danger" id="formErrors">
+      {% if form.email.errors %}
+        Looks like you forgot to type in your email
+      {% endif %}
     </div>
     {% endif %}
       <!-- Step 1 -->
@@ -119,7 +121,7 @@
           <button class="hidden" id="custom_cords_40_btn" type="button" style="width: 92%;" onclick="routeAddWaypoint40()">New waypoint</button>
         </div>
         <div class="alert-danger" id="makeRouteError" style="display: none; margin-top: 20px;">You need to draw a route, or enter your own coordinates in order to save</div>
-        <button type="button" onclick="validateStepOne()">Save</button>
+        <button class="primary" type="button" onclick="validateStepOne()">Save</button>
       </div>
 
       <!-- Step 2 -->
@@ -836,8 +838,8 @@
           <button class="hidden" id="waypoint_39_sensor_btn" type="button" style="width: 92%;" onclick="sensorAddWaypoint39()">New waypoint</button>
           <button class="hidden" id="waypoint_40_sensor_btn" type="button" style="width: 92%;" onclick="sensorAddWaypoint40()">New waypoint</button>
         </div>
-        <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one sensor before you can save</div>
-        <button type="button" onclick="validateStepTwo()">Save</button>
+        <div class="alert-danger" id="addSensorError" style="display: none; margin-top: 18px;">You need to configure atleast one waypoint before you can save</div>
+        <button class="primary" type="button" onclick="validateStepTwo()">Save</button>
       </div>
 
       <!-- Step 3 -->
@@ -913,7 +915,7 @@
         </div>
         <br>
         <br>
-        <div class="alert-danger" id="setTimeError" style="display: none; margin-top: 18px;">You need to choose a date and time in order to save</div>
+        <div class="alert-danger" id="setTimeError" style="display: none; margin-top: 18px;">You need to choose a date and time, or configure the interval</div>
         <button type="button" onclick="validateStepThree()">Save</button>
       </div>
 
@@ -926,13 +928,17 @@
         <h1>Your info</h1>
         <input type="text" name="user_html" id="user_html" style="display: none;" value="{{request.user.username}}" placeholder="Your username">
         <br>
-        <input class="user-info-input" type="text" name="name" id="name" placeholder="Your full name" value="{{request.user.get_full_name}}">
+        <label for="name">Your full name</label>
+        <br>
+        <input class="user-info-input" type="text" name="name" id="name" placeholder="Bob Stone" value="{{request.user.get_full_name}}">
         <br>
         <br>
-        <input class="user-info-input" type="email" name="email" id="email" placeholder="Your email" value="{{request.user.email}}">
+        <label for="email">Your email</label>
+        <input class="user-info-input" type="email" name="email" id="email" placeholder="youremail@email.com" value="{{request.user.email}}">
         <br>
         <br>
-        <textarea class="user-info-input-m" name="message" id="message" cols="30" rows="10" placeholder="Reason or goal for this survey"></textarea>
+        <label for="message">Reason or goal for this survey</label>
+        <textarea class="user-info-input-m" name="message" id="message" cols="30" rows="10" placeholder="Gather some data"></textarea>
         <br>
         <br>
         <div class="alert-danger" id="userInfoError" style="display: none;">You need to fill out this form before sending the survey</div>
@@ -948,6 +954,13 @@
         <h1>Summary</h1>
         <p class="paragraph">Take a look at your survey, and make some changes if you need before sending the survey</p>
         <br>
+
+        <hr style="border-color: rgba(250,250,250,0.45);">
+          <div class="summary-block">
+            <p class="name">Price</p>
+            <p class="value">20 000kr</p>
+          </div>
+        <hr style="border-color: rgba(250,250,250,0.45);">
 
         <button type="submit">Send survey</button>
       </div>
