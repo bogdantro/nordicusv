@@ -40,8 +40,8 @@ def home(request):
 
 
 
-def test(request):
-    return render(request, 'test/test.svelte')
+def help(request):
+    return render(request, 'core/help.html')
     
 
 

@@ -34,17 +34,21 @@
                     <div class="you-got-orders">
                         <div class="labels">
                             <label class="id" for="id">ID</label>
-                            <label class="date" for="date">DATE</label>
-                            <label class="total" for="total">TOTAL</label>
-                            <label class="paid" for="paid">PAID</label>
-                            <label class="details" for="details">DELIVERED</label>
+                            <label class="date" for="date">Created</label>
+                            <label class="total" for="total">Total</label>
+                            <label class="paid" for="paid">Paid</label>
+                            <label class="details" for="details">Details</label>
                         </div>
                         {% for order in request.user.orders.all %} 
                         <div class="order-info">
                                 <div class="id">{{ order.id }}</div>
                                 <div class="date">{{order.created_at | date:"d F Y"}}</div>
                                 <div class="total"> {{ order.price | floatformat }}</div>
-                                <div class="paid">{{ order.paid }}</div>
+                                {% if order.paid %}
+                                <div class="paid">Yes</div>
+                                {% else %}
+                                <div class="paid">No</div>
+                                {% endif %}
                                 <div class="details"><button>Details</button></div>
                         </div>
                         {% endfor %}

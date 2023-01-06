@@ -24,7 +24,7 @@ urlpatterns = [
     path('myaccount/', myaccount, name='myaccount'),
 
     # Test
-    path('test/', test, name='test'),
+    path('help/', help, name='help'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
